@@ -1,0 +1,40 @@
+
+https://www.programiz.com/online-compiler/1gyiHrZsTuzKF
+
+
+
+class Alumno:
+    def __init__(self, nombre="", edad=0, color="", tamano=0.0, peso=0.0):
+        self.nombre = nombre
+        self.edad = edad
+        self.color = color
+        self.tamano = tamano
+        self.peso = peso
+
+    def __str__(self):
+        return f"{self.nombre} | {self.edad} años | {self.color} | {self.tamano} m | {self.peso} kg"
+
+
+if __name__ == "__main__":
+    lista_alumnos = []
+    total_alumnos = 14
+
+    print("=== REGISTRO DE ALUMNOS ===")
+
+    for i in range(1, total_alumnos + 1):
+        print(f"\n--- Alumno {i} de {total_alumnos} ---")
+        nombre = input("Nombre: ")
+        edad = int(input("Edad: "))
+        color = input("Color: ")
+        tamano = float(input("Tamaño (ej. 1.70): "))
+        peso = float(input("Peso (ej. 65.5): "))
+
+        alumno = Alumno(nombre, edad, color, tamano, peso)
+        lista_alumnos.append(alumno)
+
+    print("\n=================================")
+    print("       LISTA DE ALUMNOS         ")
+    print("=================================")
+
+    for i, alumno in enumerate(lista_alumnos, start=1):
+        print(f"{i}. {alumno}")
