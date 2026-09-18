@@ -1,0 +1,102 @@
+https://www.programiz.com/online-compiler/4xlZ4OqMor344
+
+# Registro de Estudiantes — Pase de Lista
+
+lista_estudiantes = []
+asistencia = []
+
+def mostrar_menu():
+    print("\n=====  REGISTRO DE ESTUDIANTES — PASE DE LISTA =====")
+    print("1. Agregar estudiante")
+    print("2. Ver lista completa")
+    print("3. Marcar asistencia")
+    print("4. Ver pase de lista")
+    print("5. Eliminar estudiante")
+    print("0. Salir")
+
+def agregar_estudiante():
+    nombre = input("Escribe el nombre del estudiante: ")
+    lista_estudiantes.append(nombre)
+    asistencia.append(False)
+    print("✅ Estudiante agregado correctamente!")
+
+def mostrar_lista():
+    if not lista_estudiantes:
+        print(" La lista está vacía.")
+        return
+    print("\n--- LISTA DE ESTUDIANTES ---")
+    for i, nombre in enumerate(lista_estudiantes, start=1):
+        print(f"{i}. {nombre}")
+
+def marcar_asistencia():
+    if not lista_estudiantes:
+        print(" No hay estudiantes registrados.")
+        return
+    mostrar_lista()
+    try:
+        num = int(input("Número del estudiante: "))
+        if num < 1 or num > len(lista_estudiantes):
+            print(" Número inválido.")
+            return
+        resp = input("¿Asistió? (s = Sí / n = No): ").strip().lower()
+        asistencia[num - 1] = (resp == "s")
+        print(" Asistencia registrada!")
+    except ValueError:
+        print(" Entrada inválida.")
+
+def mostrar_pase_lista():
+    if not lista_estudiantes:
+        print(" La lista está vacía.")
+        return
+    print("\n===== PASE DE LISTA =====")
+    presentes = 0
+    for i, nombre in enumerate(lista_estudiantes, start=1):
+        estado = "✅ PRESENTE" if asistencia[i - 1] else "❌ AUSENTE"
+        print(f"{i}. {nombre} — {estado}")
+        if asistencia[i - 1]:
+            presentes += 1
+    print("--------------------------")
+    print(f"Total: {len(lista_estudiantes)} | Presentes: {presentes} | Ausentes: {len(lista_estudiantes) - presentes}")
+
+def eliminar_estudiante():
+    mostrar_lista()
+    if not lista_estudiantes:
+        return
+    try:
+        num = int(input("Número a eliminar: "))
+        if num < 1 or num > len(lista_estudiantes):
+            print(" Número inválido.")
+            return
+        lista_estudiantes.pop(num - 1)
+        asistencia.pop(num - 1)
+        print(" Estudiante eliminado.")
+    except ValueError:
+        print(" Entrada inválida.")
+
+def main():
+    opcion = -1
+    while opcion != 0:
+        mostrar_menu()
+        try:
+            opcion = int(input("Elige una opción: "))
+        except ValueError:
+            print(" Opción inválida, intenta de nuevo.")
+            continue
+
+        if opcion == 1:
+            agregar_estudiante()
+        elif opcion == 2:
+            mostrar_lista()
+        elif opcion == 3:
+            marcar_asistencia()
+        elif opcion == 4:
+            mostrar_pase_lista()
+        elif opcion == 5:
+            eliminar_estudiante()
+        elif opcion == 0:
+            print(" Saliendo del sistema...")
+        else:
+            print(" Opción no válida, intenta de nuevo.")
+
+if __name__ == "__main__":
+    main()
