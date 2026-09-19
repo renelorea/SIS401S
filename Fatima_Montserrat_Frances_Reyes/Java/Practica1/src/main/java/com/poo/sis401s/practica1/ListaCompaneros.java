@@ -1,0 +1,125 @@
+package listacompaneros; // Paquete sin la ñ
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ListaCompaneros { // Clase sin la ñ
+
+    // Creamos la estructura para definir a un compañero
+    static class Companero {
+        int id;
+        String nombre;
+        int edad;
+        String colorPiel;
+        String tamano;
+        String peso;
+
+        public Companero(int id, String nombre, int edad, String colorPiel, String tamano, String peso) {
+            this.id = id;
+            this.nombre = nombre;
+            this.edad = edad;
+            this.colorPiel = colorPiel;
+            this.tamano = tamano;
+            this.peso = peso;
+        }
+    }
+
+    static ArrayList<Companero> companeros = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        companeros.add(new Companero(1, "Carlos", 19, "Moreno", "1.70m", "65kg"));
+        companeros.add(new Companero(2, "María", 22, "Blanca", "1.62m", "54kg"));
+        companeros.add(new Companero(3, "Luis", 28, "Moreno", "1.68m", "60kg"));
+        companeros.add(new Companero(4, "Diego", 23, "Moreno", "1.58m", "52kg"));
+        companeros.add(new Companero(5, "Jorge", 30, "Blanco", "1.75m", "70kg"));
+        companeros.add(new Companero(6, "Sofía", 20, "Blanca", "1.65m", "58kg"));
+
+        iniciarPrograma();
+    }
+
+    public static void mostrarCompaneros() {
+        System.out.println("\n--- LISTA DE 6 COMPAÑEROS ---");
+        for (Companero c : companeros) {
+            System.out.printf("[%d] %-8s | Edad: %-2d | Piel: %-9s | Tamaño: %-5s | Peso: %s\n", 
+                    c.id, c.nombre, c.edad, c.colorPiel, c.tamano, c.peso);
+        }
+        System.out.println("-----------------------------\n");
+    }
+
+    public static void actualizarCompanero() {
+        mostrarCompaneros();
+        System.out.print("Ingresa el número [ID] del compañero que deseas actualizar (1-6): ");
+        
+        try {
+            int idSeleccionado = Integer.parseInt(scanner.nextLine());
+            Companero companeroEncontrado = null;
+
+            for (Companero c : companeros) {
+                if (c.id == idSeleccionado) {
+                    companeroEncontrado = c;
+                    break;
+                }
+            }
+
+            if (companeroEncontrado != null) {
+                System.out.println("\nActualizando a: " + companeroEncontrado.nombre);
+                System.out.println("(Presiona ENTER si quieres dejar el dato actual sin cambios)");
+
+                System.out.print("Nombre [" + companeroEncontrado.nombre + "]: ");
+                String nuevoNombre = scanner.nextLine();
+                if (!nuevoNombre.trim().isEmpty()) companeroEncontrado.nombre = nuevoNombre;
+
+                System.out.print("Edad [" + companeroEncontrado.edad + "]: ");
+                String nuevaEdad = scanner.nextLine();
+                if (!nuevaEdad.trim().isEmpty()) companeroEncontrado.edad = Integer.parseInt(nuevaEdad);
+
+                System.out.print("Color de piel [" + companeroEncontrado.colorPiel + "]: ");
+                String nuevoColor = scanner.nextLine();
+                if (!nuevoColor.trim().isEmpty()) companeroEncontrado.colorPiel = nuevoColor;
+
+                System.out.print("Tamaño [" + companeroEncontrado.tamano + "]: ");
+                String nuevoTamano = scanner.nextLine();
+                if (!nuevoTamano.trim().isEmpty()) companeroEncontrado.tamano = nuevoTamano;
+
+                System.out.print("Peso [" + companeroEncontrado.peso + "]: ");
+                String nuevoPeso = scanner.nextLine();
+                if (!nuevoPeso.trim().isEmpty()) companeroEncontrado.peso = nuevoPeso;
+
+                System.out.println("\n¡Datos actualizados correctamente!");
+            } else {
+                System.out.println("\nError: Número de ID no encontrado.");
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("\nError: Por favor, ingresa un valor válido.");
+        }
+    }
+
+    public static void iniciarPrograma() {
+        boolean ejecutando = true;
+        while (ejecutando) {
+            System.out.println("\n=== MENÚ PRINCIPAL ===");
+            System.out.println("1. Ver lista de compañeros");
+            System.out.println("2. Actualizar datos de un compañero");
+            System.out.println("3. Salir");
+            System.out.print("Elige una opción: ");
+
+            String opcion = scanner.nextLine();
+
+            switch (opcion) {
+                case "1":
+                    mostrarCompaneros();
+                    break;
+                case "2":
+                    actualizarCompanero();
+                    break;
+                case "3":
+                    System.out.println("Saliendo del programa...");
+                    ejecutando = false;
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intenta de nuevo.");
+            }
+        }
+    }
+}
