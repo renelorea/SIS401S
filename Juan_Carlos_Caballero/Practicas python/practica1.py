@@ -1,0 +1,5 @@
+print("Nombre: Daniela")
+print("Edad: 26")
+print("Color: Morena")
+print("Tamaño: 1.65")
+print("Peso: 55 kg")
