@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.poo.sis401s.OBJETO;
-
 /**
  *
  * @author lobog
@@ -11,10 +10,12 @@ package com.poo.sis401s.OBJETO;
 public class Persona {
     String nombre;
     int edad;
-    String color;
-    double tamaño;
+    String test;
+    double estatura;
     double peso;
-
+    
+    Direccion direccion;
+   
     public String getNombre() {
         return nombre;
     }
@@ -31,20 +32,20 @@ public class Persona {
         this.edad = edad;
     }
 
-    public String getColor() {
-        return color;
+    public String getTest() {
+        return test;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setTest(String test) {
+        this.test = test;
     }
 
-    public double getTamaño() {
-        return tamaño;
+    public double getEstatura() {
+        return estatura;
     }
 
-    public void setTamaño(double tamaño) {
-        this.tamaño = tamaño;
+    public void setEstatura(double estatura) {
+        this.estatura = estatura;
     }
 
     public double getPeso() {
@@ -54,6 +55,12 @@ public class Persona {
     public void setPeso(double peso) {
         this.peso = peso;
     }
-    
-    
+public Direccion getDireccion(){
+   return direccion;
 }
+public void setDireccion(Direccion direccion){
+    this.direccion = direccion;
+}
+}
+
+

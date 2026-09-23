@@ -1,0 +1,10 @@
+from Objeto.CalculadoraBasica import CalculadoraBasica
+calculadora = CalculadoraBasica()
+print("Ingresa el primer numero:")
+calculadora.numero1 = float(input())
+print("Ingresa el segundo numero:")
+calculadora.numero2 = float(input())
+print("Suma:", calculadora.suma())
+print("Resta:", calculadora.resta())
+print("Multiplicacion:", calculadora.multiplicacion())
+print("Division:", calculadora.division())
