@@ -1,0 +1,30 @@
+cd C:\Users\Sanch\Documents\NetBeansProjects\Proyecto01; "JAVA_HOME=C:\\Program Files\\Java\\jdk-26.0.1" cmd /c "\"C:\\Users\\Sanch\\Downloads\\netbeans-29-bin\\netbeans\\java\\maven\\bin\\mvn.cmd\" -Dexec.vmArgs= \"-Dexec.args=${exec.vmArgs} -classpath %classpath ${exec.mainClass} ${exec.appArgs}\" -Dexec.appArgs= -Dexec.mainClass=com.poo.sis401s.proyecto01.Proyecto01 \"-Dexec.executable=C:\\Program Files\\Java\\jdk-26.0.1\\bin\\java.exe\" -Dmaven.ext.class.path=C:\\Users\\Sanch\\Downloads\\netbeans-29-bin\\netbeans\\java\\maven-nblib\\netbeans-eventspy.jar --no-transfer-progress process-classes org.codehaus.mojo:exec-maven-plugin:3.5.1:exec"
+WARNING: Final field _cipher in class org.sonatype.plexus.components.sec.dispatcher.DefaultSecDispatcher has been mutated reflectively by class org.eclipse.sisu.bean.BeanPropertyField in unnamed module @2cbb3d47 (file:/C:/Users/Sanch/Downloads/netbeans-29-bin/netbeans/java/maven/lib/org.eclipse.sisu.inject-0.9.0.M4.jar)
+WARNING: Use --enable-final-field-mutation=ALL-UNNAMED to avoid a warning
+WARNING: Mutating final fields will be blocked in a future release unless final field mutation is enabled
+Scanning for projects...
+
+---------------------< com.poo.SIS401S:Proyecto01 >---------------------
+Building Proyecto01 1.0-SNAPSHOT
+  from pom.xml
+--------------------------------[ jar ]---------------------------------
+
+--- resources:3.3.1:resources (default-resources) @ Proyecto01 ---
+skip non existing resourceDirectory C:\Users\Sanch\Documents\NetBeansProjects\Proyecto01\src\main\resources
+
+--- compiler:3.13.0:compile (default-compile) @ Proyecto01 ---
+Recompiling the module because of changed source code.
+Compiling 2 source files with javac [debug release 26] to target\classes
+
+--- exec:3.5.1:exec (default-cli) @ Proyecto01 ---
+=== REGISTRO DE 15 PERSONAS ===
+
+Ingrese los datos de la persona #1:
+Nombre: Nely
+Edad: 24
+Color: cafe
+Tama�o (ej. 1.70): 1.72
+Peso (ej. 65.5): 58.03
+
+Ingrese los datos de la persona #2:
+Nombre: 
