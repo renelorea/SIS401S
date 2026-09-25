@@ -1,5 +1,7 @@
 package com.mycompany.proyectoalumnos;
 
+import com.mycompany.proyectoalumno.Alumno;
+import com.mycompany.proyectoalumno.Direecion;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,8 +25,29 @@ public class PROYECTOALUMNOS {
             double tamano = Double.parseDouble(teclado.nextLine());
             System.out.print("Peso (ej. 65.5): ");
             double peso = Double.parseDouble(teclado.nextLine());
+            
+            Direecion direecion = new Direecion();
+       System.out.print("calle: ");
+            String calle = teclado.nextLine();
 
-            Alumno alumno = new Alumno(nombre, edad, color, tamano, peso);
+            System.out.print("numero (ej. 123.5): ");
+            double numero = Double.parseDouble(teclado.nextLine());
+
+            System.out.print("colonia: ");
+            String colonia = teclado.nextLine();
+
+            System.out.print("CP: ");
+            int CP = Integer.parseInt(teclado.nextLine());
+
+            System.out.print("estado: ");
+            String estado = teclado.nextLine();
+
+            System.out.print("pais: ");
+            String pais = teclado.nextLine();
+            
+
+            Alumno alumno = new Alumno(nombre, edad, color, tamano, peso,direecion);
+            
             listaAlumnos.add(alumno);
         }
 
@@ -36,4 +59,5 @@ public class PROYECTOALUMNOS {
             System.out.println((i + 1) + ". " + listaAlumnos.get(i));
         }
     }
+    
 }
