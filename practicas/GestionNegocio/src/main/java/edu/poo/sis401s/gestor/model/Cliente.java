@@ -1,17 +1,24 @@
-package edu.poo.sis401s.gestor.negocio;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.poo.sis401s.gestor.model;
 
 import java.time.LocalDate;
 
+/**
+ *
+ * @author Hp
+ */
 public class Cliente {
-    // 1. ATRIBUTOS PRIVADOS
     private int id;
     private String nombre;
     private String correo;
     private String telefono;
     private String tipoPerfil;
     private LocalDate fechaRegistro;
+   
 
-    // 2. CONSTRUCTORES
     public Cliente(int id, String nombre, String correo, String telefono) {
         this.id = id;
         this.nombre = nombre;
@@ -20,8 +27,7 @@ public class Cliente {
         this.tipoPerfil = "Persona";
         this.fechaRegistro = LocalDate.now();
     }
-
-    public Cliente(int id, String nombre, String correo, String telefono, String tipoPerfil, LocalDate fechaRegistro) {
+    public Cliente(int id, String nombre, String correo, String telefono, String tipoPerfil, LocalDate fechaRegistro){
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
@@ -29,9 +35,7 @@ public class Cliente {
         this.tipoPerfil = tipoPerfil;
         this.fechaRegistro = fechaRegistro;
     }
-
-    // 3. GETTERS AND SETTERS
-    public int getId() { return id; }
+     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
     public String getNombre() { return nombre; }
@@ -49,7 +53,6 @@ public class Cliente {
     public LocalDate getFechaRegistro() { return fechaRegistro; }
     public void setFechaRegistro(LocalDate fechaRegistro) { this.fechaRegistro = fechaRegistro; }
 
-    // 4. MÉTODO TOSTRING
     @Override
     public String toString() {
         return "Cliente{" +
@@ -61,4 +64,7 @@ public class Cliente {
                 ", fechaRegistro=" + fechaRegistro +
                 '}';
     }
+
+    // Getters y setters
 }
+
