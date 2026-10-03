@@ -4,25 +4,26 @@
  */
 package edu.poo.sis401s.gestor.model;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Hp
  */
 public class ReporteFinanciero {
-    private int id;
-    private double ingresos;
-    private double egresos;
-
-    public ReporteFinanciero(int id, double ingresos, double egresos) {
-        this.id = id;
-        this.ingresos = ingresos;
-        this.egresos = egresos;
+     private ArrayList<Venta> ventas;
+    public ReporteFinanciero(){
+        ventas = new ArrayList<>();
     }
-
-    public double getBalance() {
-        return ingresos - egresos;
+    public void agregarVenta(Venta venta){
+        ventas.add(venta);
     }
-
-    // Getters y setters
+    public double calcularTotal(){
+        double total = 0;
+        for (Venta venta : ventas){
+        total += venta.getCantidad()* venta.getPrecio();
+        }
+        return total;
+    }
 }
 
