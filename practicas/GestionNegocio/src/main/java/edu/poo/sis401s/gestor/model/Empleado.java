@@ -6,7 +6,7 @@ package edu.poo.sis401s.gestor.model;
 
 /**
  *
- * @author Hp
+ * @author pao
  */
 public class Empleado {
     private int id;
