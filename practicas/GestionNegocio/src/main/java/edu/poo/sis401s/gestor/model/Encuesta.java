@@ -20,7 +20,42 @@ public class Encuesta {
         this.calificacion = calificacion;
         this.comentario = comentario;
     }
+// Getters
+    public int getId() {
+        return id;
+    }
 
-    // Getters y setters
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public String getComentario() {
+        return comentario;
+    }
+
+    // Setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public void setCalificacion(int calificacion) {
+        if (calificacion >= 1 && calificacion <= 5) {
+            this.calificacion = calificacion;
+        } else {
+            System.out.println("⚠️ La calificación debe estar entre 1 y 5.");
+        }
+    }
+
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
 }
-
+ 
