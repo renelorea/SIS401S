@@ -12,7 +12,7 @@ import edu.poo.sis401s.gestor.model.Usuario;
 import java.util.HashMap;
 
 public class UsuarioRepository {
-    private HashMap<String, Usuario> usuarios = new HashMap<>();
+    private final HashMap<String, Usuario> usuarios = new HashMap<>();
 
     public UsuarioRepository() {
         // Usuarios de prueba

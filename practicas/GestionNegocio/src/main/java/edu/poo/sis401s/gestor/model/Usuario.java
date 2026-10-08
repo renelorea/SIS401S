@@ -18,7 +18,7 @@ public class Usuario {
     }
 
     // Getters y setters
-
+    
     public int getId() {
         return id;
     }
@@ -52,4 +52,3 @@ public class Usuario {
     }
     
 }
-
