@@ -25,11 +25,8 @@ public class ReporteFinancieroService {
         ventas.add(venta);
     }
     public double calcularTotal(){
-        double total = 0;
-        for (Venta venta : ventas){
-        total += venta.getCantidad()* venta.getPrecio();
-        }
-        return total;
+        ReporteFinanciero reporte = buscarTodos();
+        return reporte.calcularTotal();
     }
     
     public ReporteFinanciero buscarTodos(){
