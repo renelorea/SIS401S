@@ -18,7 +18,9 @@ public class ReporteFinanciero {
         ventas = new ArrayList<>();
     }
     public void agregarVenta(Venta venta){
-        ventas.add(venta);
+        if (venta != null){
+          ventas.add(venta);  
+        }
     }
     public double calcularTotal(){
         double total = 0;
@@ -119,7 +121,7 @@ return productoMayor;
         int cantidad = 0;
         for(Venta venta : ventas){
             double importe = venta.getCantidad()*venta.getPrecio();
-            if (importe > limite){
+            if (importe < limite){
                 cantidad++;
             }
         }
@@ -180,5 +182,9 @@ return productoMayor;
         double ingresoAnterior = buscarTotalPorFecha(fechaAnterior);
         return calcularVariacionPorcentual(ingresoActual, ingresoAnterior);
     }
+    public ArrayList <Venta>getVentas()
+    {return new ArrayList<>(ventas);}
+    public int getNumeroVentas()
+    {return ventas.size();}
 }
 
