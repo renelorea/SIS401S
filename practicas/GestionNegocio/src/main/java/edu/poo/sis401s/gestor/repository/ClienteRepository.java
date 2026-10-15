@@ -38,6 +38,15 @@ public class ClienteRepository {
         }
         return null;
     }
+        public Cliente buscarPorNombre(String nombre) {
+        for (Cliente c : listaClientes) {
+          if (c.getNombre().equalsIgnoreCase(nombre)) {
+              return c;
+          }  
+        }
+        return null;
+    }
+    
     public boolean eliminar(int id) {
         return listaClientes.removeIf(c -> c.getId() == id);
     }
