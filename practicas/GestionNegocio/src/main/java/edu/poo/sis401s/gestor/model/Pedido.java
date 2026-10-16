@@ -1,15 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package edu.poo.sis401s.gestor.model;
 
-/**
- *
- * @author Hp
- */
-import java.util.List;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Pedido {
     private int id;
@@ -24,6 +16,41 @@ public class Pedido {
         this.fecha = fecha;
     }
 
-    // Getters y setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
+    public List<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(List<Producto> productos) {
+        this.productos = productos;
+    }
+
+    public LocalDate getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(LocalDate fecha) {
+        this.fecha = fecha;
+    }
+
+    @Override
+    public String toString() {
+        return "Pedido{" + "id=" + id + ", cliente=" + cliente + ", productos=" + productos + ", fecha=" + fecha + '}';
+    }
 }
 

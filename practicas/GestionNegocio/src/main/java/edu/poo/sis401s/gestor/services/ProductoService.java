@@ -12,6 +12,10 @@ import java.util.List;
  */
 public class ProductoService {
     private ProductoRepository productoRepository;
+    
+        public boolean eliminarProducto(int id) {
+        return productoRepository.eliminar(id);
+    }
 
     public ProductoService() {
         this.productoRepository = new ProductoRepository();

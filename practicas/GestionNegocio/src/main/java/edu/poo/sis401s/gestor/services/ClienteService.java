@@ -32,4 +32,10 @@ public class ClienteService {
     public Cliente buscarCliente(int id) {
         return clienteRepository.buscarPorId(id);
     }
+    public Cliente buscarClientePorNombre(String nombre) {
+        return clienteRepository.buscarPorNombre(nombre);
+    }
+    public boolean eliminarCliente(int id) {
+        return clienteRepository.eliminar(id);
+    }
 }

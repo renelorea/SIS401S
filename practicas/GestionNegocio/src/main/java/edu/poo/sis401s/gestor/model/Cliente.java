@@ -19,7 +19,7 @@ public class Cliente {
     private LocalDate fechaRegistro;
    
 
-    public Cliente(String nombre) {
+    public Cliente(int id, String nombre, String correo, String telefono) {
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
