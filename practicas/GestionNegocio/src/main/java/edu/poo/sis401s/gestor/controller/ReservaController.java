@@ -15,10 +15,10 @@ package edu.poo.gestionnegocio.controller;
 
 
 import edu.poo.gestionnegocio.model.Reserva;
-import edu.poo.gestionnegocio.service.ReservaService;
+import edu.poo.gestionnegocio.services.ReservaService;
 import java.util.List;
 
-public class ReservaController {   // <-- aquí está el cambio
+public class ReservaController {
     private final ReservaService service;
 
     public ReservaController(ReservaService service) {
@@ -33,20 +33,13 @@ public class ReservaController {   // <-- aquí está el cambio
         return service.listarReservas();
     }
 
-    public void cambiarEstatus(String codigo, String nuevo) {
-        for (Reserva r : service.listarReservas()) {
-            if (r.getCodigo().equals(codigo)) {
-                r.setEstatus(nuevo);
-            }
-        }
+    // ✅ ahora sí guarda historial
+    public void cambiarEstatus(String codigo, String nuevo, String usuario) {
+        service.cambiarEstatus(codigo, nuevo, usuario);
     }
 
-    public void actualizarComentario(String codigo, String comentario) {
-        Reserva reserva = service.buscarPorCodigo(codigo);
-        if (reserva != null) {
-            reserva.setComentarios(comentario);
-        }
+    // ✅ ahora sí guarda historial
+    public void actualizarComentario(String codigo, String comentario, String usuario) {
+        service.actualizarComentario(codigo, comentario, usuario);
     }
 }
-
-
