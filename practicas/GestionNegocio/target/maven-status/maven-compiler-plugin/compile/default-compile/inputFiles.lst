@@ -5,6 +5,7 @@ C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis40
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\controller\ProductoController.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\controller\ReporteFinancieroController.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\controller\ReservaController.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\controller\VentaController.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\gestionnegocio\GestionNegocio.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\model\Cliente.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\model\Empleado.java
@@ -22,6 +23,7 @@ C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis40
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\repository\ReporteFinancieroRepository.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\repository\ReservaRepository.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\repository\UsuarioRepository.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\repository\VentaRepository.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\ClienteService.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\EmpleadoService.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\LoginService.java
@@ -31,6 +33,8 @@ C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis40
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\ProductoService.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\ReporteFinancieroService.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\ReservaService.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\services\VentaService.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ClienteView.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\EmpleadoAgregarView.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\EmpleadoBuscarView.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\EmpleadoEliminarView.java
@@ -48,5 +52,6 @@ C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis40
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ProductoRegistroView.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ProductoView.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ReporteFinancieroView.java
-C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ReporteFinancieroView1.java
 C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\ReservaView.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\VentaView.java
+C:\Users\HP\Desktop\SIS401S\practicas\GestionNegocio\src\main\java\edu\poo\sis401s\gestor\view\VentaView1.java
