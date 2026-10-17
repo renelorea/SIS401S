@@ -1,5 +1,7 @@
 package edu.poo.sis401s.gestor.view;
 
+import edu.poo.sis401s.gestor.model.PedidoOrderLine;
+import edu.poo.sis401s.gestor.model.PedidoYProducto;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Component;
@@ -81,13 +83,13 @@ public final class PedidoView {
         inventoryFrame.setVisible(true);
     }
 
-    public void updateInventory(List<Product> products, List<String> pendingIds) {
+    public void updateInventory(List<PedidoYProducto> products, List<String> pendingIds) {
         pendingProductIds = new HashSet<>(pendingIds);
         if (inventoryModel == null) {
             return;
         }
         inventoryModel.setRowCount(0);
-        for (Producto product : products) {
+        for (PedidoYProducto product : products) {
             inventoryModel.addRow(new Object[]{
                     product.getName(), product.getId(), currency.format(product.getPrice()),
                     product.getQuantity()
@@ -162,7 +164,7 @@ public final class PedidoView {
         }
     }
 
-    public void showCustomerWindow(List<Product> products, List<OrderLine> cart,
+    public void showCustomerWindow(List<PedidoYProducto> products, List<PedidoOrderLine> cart,
                                    Runnable start, Runnable add, Runnable specify, Runnable back) {
         customerFrame = createFrame("Pedido Para Cliente");
         customerInventoryModel = createProductModel();
@@ -191,10 +193,10 @@ public final class PedidoView {
         customerFrame.setVisible(true);
     }
 
-    public void updateCustomerWindow(List<Product> products, List<OrderLine> cart) {
+    public void updateCustomerWindow(List<PedidoYProducto> products, List<PedidoOrderLine> cart) {
         if (customerInventoryModel != null) {
             customerInventoryModel.setRowCount(0);
-            for (Product product : products) {
+            for (PedidoYProducto product : products) {
                 if (product.getQuantity() == 0) {
                     continue;
                 }
@@ -206,7 +208,7 @@ public final class PedidoView {
         }
         if (cartModel != null) {
             cartModel.setRowCount(0);
-            for (OrderLine line : cart) {
+            for (PedidoOrderLine line : cart) {
                 cartModel.addRow(new Object[]{line.getProductName(), line.getProductId(),
                         line.getQuantity(), currency.format(line.getUnitPrice())});
             }
@@ -234,7 +236,7 @@ public final class PedidoView {
         return purchaseTable == null ? new int[0] : purchaseTable.getSelectedRows();
     }
 
-    public void showPurchaseWindow(List<OrderLine> lines, Runnable change, Runnable remove,
+    public void showPurchaseWindow(List<PedidoOrderLine> lines, Runnable change, Runnable remove,
                                    Runnable confirm, Runnable returnToCart) {
         purchaseFrame = createFrame("Especificar Pedido");
         if (customerFrame != null) {
@@ -258,12 +260,12 @@ public final class PedidoView {
         purchaseFrame.setVisible(true);
     }
 
-    public void updatePurchaseWindow(List<OrderLine> lines) {
+    public void updatePurchaseWindow(List<PedidoOrderLine> lines) {
         if (purchaseModel == null) {
             return;
         }
         purchaseModel.setRowCount(0);
-        for (OrderLine line : lines) {
+        for (PedidoOrderLine line : lines) {
             purchaseModel.addRow(new Object[]{line.getProductName(), line.getProductId(),
                     line.getQuantity(), currency.format(line.getUnitPrice())});
         }

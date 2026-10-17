@@ -1,22 +1,26 @@
-package edu.poo.gestionnegocio.view;
+package edu.poo.sis401s.gestor.view;
 
+import edu.poo.sis401s.gestor.controller.PedidoController;
+import edu.poo.sis401s.gestor.repository.PedidoRepository;
+import edu.poo.sis401s.gestor.services.PedidoService;
+import edu.poo.sis401s.gestor.view.PedidoView;
 import java.awt.GraphicsEnvironment;
 import java.util.Scanner;
 import java.util.concurrent.CountDownLatch;
 import javax.swing.SwingUtilities;
 
-public final class Main {
-    private Main() {
+public final class PedidoMain {
+    private PedidoMain() {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        View view = new View();
+        PedidoView view = new PedidoView();
         if (GraphicsEnvironment.isHeadless()) {
             view.printTerminalMessage("This application needs a graphical desktop to open its windows.");
             return;
         }
 
-        Controller controller = new Controller(new Service(new Repository()), view);
+        PedidoController controller = new PedidoController(new PedidoService(new PedidoRepository()), view);
         try (Scanner scanner = new Scanner(System.in)) {
             boolean running = true;
             while (running) {
