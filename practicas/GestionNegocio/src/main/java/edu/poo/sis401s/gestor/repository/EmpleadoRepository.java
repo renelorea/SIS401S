@@ -6,9 +6,10 @@ package edu.poo.sis401s.gestor.repository;
 
 import edu.poo.sis401s.gestor.model.Empleado;
 import java.util.ArrayList;
+
 /**
- *
- * @author Equipo 6
+ * Repositorio de empleados: aqui se guardan los datos.
+ * El servicio le pide al repositorio guardar, buscar, listar o eliminar.
  */
 public class EmpleadoRepository {
     private ArrayList<Empleado> listaEmpleados;
@@ -42,4 +43,3 @@ public class EmpleadoRepository {
         return listaEmpleados.remove(e);
     }
 }
-
