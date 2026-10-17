@@ -1,0 +1,117 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="N4XyDolxWWFUSmI_iQ2e">
+    <mxGraphModel dx="1012" dy="556" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-18" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="765" y="1040" as="sourcePoint" />
+            <mxPoint x="765" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-20" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;ClienteController.java&quot; aria-label=&quot;ClienteController.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/controller/ClienteController.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(9, 105, 218) !important;&quot;&gt;ClienteController.java&lt;/a&gt;" vertex="1">
+          <mxGeometry height="180" width="340" x="135" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-80" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="FYfbNBW_tXnReo66tOUQ-73">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="620" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-21" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;ClienteService.java&quot; aria-label=&quot;ClienteService.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/services/ClienteService.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); text-decoration: none; font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(31, 35, 40) !important;&quot;&gt;ClienteService.java&lt;/a&gt;" vertex="1">
+          <mxGeometry height="230" width="320" x="150" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-22" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;ClienteRepository.java&quot; aria-label=&quot;ClienteRepository.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/repository/ClienteRepository.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); text-decoration: none; font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(31, 35, 40) !important;&quot;&gt;ClienteRepository.java&lt;/a&gt;" vertex="1">
+          <mxGeometry height="210" width="290" x="50" y="1023" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-23" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;Cliente.java&quot; aria-label=&quot;Cliente.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/model/Cliente.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); text-decoration: none; font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(31, 35, 40);&quot;&gt;Cliente.java&lt;/a&gt;&lt;div&gt;(Model)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="240" width="290" x="140" y="1310" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-29" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="cliente servicio:clienteService" vertex="1">
+          <mxGeometry height="26" width="210" x="204" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-41" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+registrarNuevo cliente(c:cliente):boolean&lt;div&gt;&lt;span style=&quot;color: rgb(204, 204, 204);&quot;&gt;&amp;lt;&amp;lt;valida´@´.´y logitud de telefono&amp;gt;&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent;&quot;&gt;+&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: rgb(26, 26, 26);&quot;&gt;ListarTod&lt;/span&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(26, 26, 26), rgb(215, 215, 215));&quot;&gt;osLosClientes():List&amp;lt;Cliente&amp;gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(26, 26, 26), rgb(215, 215, 215));&quot;&gt;+BuscarClientePorNombre(nombre:String):Cliente&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(26, 26, 26), rgb(215, 215, 215));&quot;&gt;eliminarCliente(id:int):boolean&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="290" x="160" y="762" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-42" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="-clienteRepository: ClienteRepository" vertex="1">
+          <mxGeometry height="26" width="250" x="160" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-46" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="- listaClientes:List&amp;lt;Cliente&amp;gt;" vertex="1">
+          <mxGeometry height="26" width="235" x="70" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-47" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+guardar(c:Cliente):boolean&lt;div&gt;+obtenerTodos():List&amp;lt;Cliente&amp;gt;&lt;/div&gt;&lt;div&gt;-buscarPorNombre(nombreString):Cliente&lt;/div&gt;&lt;div&gt;-eliminar(id,int):boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="290" x="50" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-85" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.208;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;labelBorderColor=default;" target="FYfbNBW_tXnReo66tOUQ-23">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="274" />
+              <mxPoint x="10" y="479" />
+              <mxPoint x="20" y="479" />
+              <mxPoint x="20" y="1359.9" />
+            </Array>
+            <mxPoint x="30" y="274" as="sourcePoint" />
+            <mxPoint x="20" y="960" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-50" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;labelBackgroundColor=#FFFFFF;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="ClienteView&lt;div&gt;(JFrame)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="230" width="320" x="30" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-52" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="txtBuscar:JTextField&lt;div&gt;-tablaClientes:JTable&lt;/div&gt;&lt;div&gt;-btnRegistrar,btnEliminar,btnBuscar...&lt;/div&gt;&lt;div&gt;-clienteController&lt;/div&gt;&lt;div&gt;-rolUsuario:String&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="280" x="50" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-53" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+ClienteView(rol:String)&lt;div&gt;+btnBuscarActionPerformed(evt:ActionEvent)&lt;/div&gt;&lt;div&gt;+btnRegistrarActionPerformed(evt:ActionEvent)&lt;/div&gt;&lt;div&gt;+cargarTabla()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="66" width="290" x="40" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-55" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;innerLoopWaypoints=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="FYfbNBW_tXnReo66tOUQ-42">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-61" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+registrarClirnte(id,nom,cor,tel,per):bool&lt;div&gt;+obtenertodos los clientes():List&amp;lt;Cliente&amp;gt;&lt;/div&gt;&lt;div&gt;+buscarPorNombre(nombre:string):Cliente&lt;/div&gt;&lt;div&gt;+elminarCliente(id:int)boolean&lt;/div&gt;" vertex="1">
+          <mxGeometry height="84" width="300" x="150" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-65" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.994;entryY=0.091;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-50">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-66" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-50" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.011;entryY=0.83;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-72" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.087;entryY=0.562;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-73" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Condition" vertex="1">
+          <mxGeometry height="60" width="110" x="560" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-74" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-73" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.816;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-20" value="no">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <mxPoint x="650" y="510" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-75" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-73" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.703;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="FYfbNBW_tXnReo66tOUQ-22" value="yes">
+          <mxGeometry relative="1" x="-1" as="geometry">
+            <Array as="points">
+              <mxPoint x="640" y="595" />
+              <mxPoint x="640" y="892.6" />
+              <mxPoint x="630" y="892.6" />
+              <mxPoint x="630" y="1175.2" />
+              <mxPoint x="458.5" y="1175.2" />
+            </Array>
+            <mxPoint x="640" y="609.9981818181817" as="sourcePoint" />
+            <mxPoint x="640" y="1175.18" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-78" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+Cliente(...)&lt;div&gt;+getters()ySetters()&lt;/div&gt;" vertex="1">
+          <mxGeometry height="40" width="220" x="165" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-79" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="-id:int&lt;div&gt;-nombre:String&lt;/div&gt;&lt;div&gt;-coreo:String&lt;/div&gt;&lt;div&gt;-telefono:String&lt;/div&gt;&lt;div&gt;-tipoPerfil:string&lt;/div&gt;&lt;div&gt;-fechaRegistro:LocalDate&lt;/div&gt;" vertex="1">
+          <mxGeometry height="104" width="260" x="150" y="1366" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-81" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.017;entryY=0.852;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FYfbNBW_tXnReo66tOUQ-82" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.016;entryY=0.147;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
