@@ -1,4 +1,4 @@
-package edu.poo.gestionnegocio.view;
+package edu.poo.sis401s.gestor.view;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -25,7 +25,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 
-public final class View {
+public final class PedidoView {
     private static final Color AVAILABLE_COLOR = new Color(198, 239, 206);
     private static final Color PENDING_COLOR = new Color(255, 235, 156);
     private static final Color UNAVAILABLE_COLOR = new Color(255, 199, 206);
@@ -87,7 +87,7 @@ public final class View {
             return;
         }
         inventoryModel.setRowCount(0);
-        for (Product product : products) {
+        for (Producto product : products) {
             inventoryModel.addRow(new Object[]{
                     product.getName(), product.getId(), currency.format(product.getPrice()),
                     product.getQuantity()

@@ -1,19 +1,23 @@
 package edu.poo.sis401s.gestor.controller;
 
+import edu.poo.sis401s.gestor.model.PedidoOrderLine;
+import edu.poo.sis401s.gestor.model.PedidoYProducto;
+import edu.poo.sis401s.gestor.services.PedidoService;
+import edu.poo.sis401s.gestor.view.PedidoView;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-public final class Controller {
-    private final Service service;
-    private final View view;
-    private final Map<String, OrderLine> cart = new LinkedHashMap<>();
+public final class PedidoController {
+    private final PedidoService service;
+    private final PedidoView view;
+    private final Map<String, PedidoOrderLine> cart = new LinkedHashMap<>();
     private Runnable returnToTerminal;
     private boolean purchaseConfirmed;
 
-    public Controller(Service service, View view) {
+    public PedidoController(PedidoService service, PedidoView view) {
         this.service = service;
         this.view = view;
     }
@@ -29,8 +33,8 @@ public final class Controller {
         returnToTerminal = onBack;
         cart.clear();
         purchaseConfirmed = false;
-        view.showCustomerWindow(service.getProducts(), List.of(), this::startSelecting,
-                this::addSelectedProducts, this::openPurchaseWindow, this::backToTerminal);
+//        view.showCustomerWindow(service.getProducts(), List.of(), this::startSelecting,
+//                this::addSelectedProducts, this::openPurchaseWindow, this::backToTerminal);
     }
 
     private void openSupplierOrder() {
@@ -53,7 +57,7 @@ public final class Controller {
 
     private void confirmSupplierOrder() {
         try {
-            List<OrderLine> lines = new ArrayList<>();
+            List<PedidoOrderLine> lines = new ArrayList<>();
             for (String[] row : view.getSupplierRows()) {
                 if (isBlank(row)) {
                     continue;
@@ -64,7 +68,7 @@ public final class Controller {
                 } catch (NumberFormatException exception) {
                     throw new IllegalArgumentException("La cantidad debe de ser un número entero positivo.");
                 }
-                lines.add(new OrderLine(row[1].trim(), row[0].trim(), quantity, BigDecimal.ZERO));
+                lines.add(new PedidoOrderLine(row[1].trim(), row[0].trim(), quantity, BigDecimal.ZERO));
             }
             service.placeSupplierOrder(lines);
             view.showInformation("Order placed successfully");
@@ -85,11 +89,11 @@ public final class Controller {
 
     private List<String> pendingOrderIds() {
         return service.getProducts().stream().filter(product -> service.hasPendingOrder(product.getId()))
-                .map(Product::getId).toList();
+                .map(PedidoYProducto::getId).toList();
     }
 
     private void refreshInventory() {
-        view.updateInventory(service.getProducts(), pendingOrderIds());
+        //view.updateInventory(service.getProducts(), pendingOrderIds());
     }
 
     private void startSelecting() {
@@ -102,13 +106,13 @@ public final class Controller {
             view.showError("Selecciona una o mas filas primero.");
             return;
         }
-        List<Product> products = service.getProducts().stream()
+        List<PedidoYProducto> products = service.getProducts().stream()
                 .filter(product -> product.getQuantity() > 0).toList();
         Map<String, Integer> requestedQuantities = new LinkedHashMap<>();
         try {
             for (int row : selectedRows) {
-                Product product = products.get(row);
-                OrderLine existing = cart.get(product.getId());
+                PedidoYProducto product = products.get(row);
+                PedidoOrderLine existing = cart.get(product.getId());
                 int currentQuantity = requestedQuantities.getOrDefault(product.getId(),
                         existing == null ? 0 : existing.getQuantity());
                 int newQuantity = currentQuantity + 1;
@@ -116,7 +120,7 @@ public final class Controller {
                 requestedQuantities.put(product.getId(), newQuantity);
             }
             for (Map.Entry<String, Integer> entry : requestedQuantities.entrySet()) {
-                OrderLine existing = cart.get(entry.getKey());
+                PedidoOrderLine existing = cart.get(entry.getKey());
                 if (existing == null) {
                     cart.put(entry.getKey(), service.createCustomerLine(entry.getKey(), entry.getValue()));
                 } else {
@@ -136,8 +140,8 @@ public final class Controller {
             return;
         }
         purchaseConfirmed = false;
-        view.showPurchaseWindow(copyCart(), this::changeCustomerQuantity,
-                this::removeCustomerProducts, this::confirmPurchase, this::returnFromPurchase);
+//        view.showPurchaseWindow(copyCart(), this::changeCustomerQuantity,
+//                this::removeCustomerProducts, this::confirmPurchase, this::returnFromPurchase);
     }
 
     private void changeCustomerQuantity() {
@@ -146,7 +150,7 @@ public final class Controller {
             view.showError("Selecciona un producto para cambiar su cantidad.");
             return;
         }
-        OrderLine line = cart.values().stream().toList().get(row);
+        PedidoOrderLine line = cart.values().stream().toList().get(row);
         String quantityText = view.promptQuantity(line.getProductName(), line.getQuantity());
         if (quantityText == null) {
             return;
@@ -216,16 +220,16 @@ public final class Controller {
     }
 
     private void refreshCustomerWindow() {
-        view.updateCustomerWindow(service.getProducts(), copyCart());
+        //view.updateCustomerWindow(service.getProducts(), copyCart());
     }
 
     private void refreshPurchaseWindow() {
-        view.updatePurchaseWindow(copyCart());
+        //view.updatePurchaseWindow(copyCart());
     }
 
-    private List<OrderLine> copyCart() {
+    private List<PedidoOrderLine> copyCart() {
         return cart.values().stream()
-                .map(line -> new OrderLine(line.getProductId(), line.getProductName(),
+                .map(line -> new PedidoOrderLine(line.getProductId(), line.getProductName(),
                         line.getQuantity(), line.getUnitPrice()))
                 .toList();
     }

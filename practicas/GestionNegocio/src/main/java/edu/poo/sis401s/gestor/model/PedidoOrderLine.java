@@ -1,15 +1,15 @@
-package edu.poo.sis401s.gestor.services;
+package edu.poo.sis401s.gestor.model;
 
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public final class OrderLine {
+public final class PedidoOrderLine {
     private final String productId;
     private final String productName;
     private final BigDecimal unitPrice;
     private int quantity;
 
-    public OrderLine(String productId, String productName, int quantity, BigDecimal unitPrice) {
+    public PedidoOrderLine(String productId, String productName, int quantity, BigDecimal unitPrice) {
         this.productId = Objects.requireNonNull(productId);
         this.productName = Objects.requireNonNull(productName);
         this.unitPrice = Objects.requireNonNull(unitPrice);
