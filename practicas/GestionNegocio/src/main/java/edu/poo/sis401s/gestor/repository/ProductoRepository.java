@@ -39,11 +39,10 @@ public class ProductoRepository {
         
     }
     public boolean agregar(Producto producto) {
-        if (producto != null) {
-            
-        }
-        return false;
-        
+    if (producto != null) {
+        return inventario.add(producto);
+    }
+    return false;
     }
     public List<Producto> listarTodos() {
         return new ArrayList<>(inventario);
