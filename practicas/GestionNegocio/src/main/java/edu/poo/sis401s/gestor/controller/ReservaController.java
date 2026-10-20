@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package edu.poo.gestionnegocio.controller;
+package edu.poo.sis401s.gestor.controller;
 
 /**
  *
@@ -14,8 +14,8 @@ package edu.poo.gestionnegocio.controller;
 
 
 
-import edu.poo.gestionnegocio.model.Reserva;
-import edu.poo.gestionnegocio.services.ReservaService;
+import edu.poo.sis401s.gestor.model.Reserva;
+import edu.poo.sis401s.gestor.services.ReservaService;
 import java.util.List;
 
 public class ReservaController {

@@ -21,7 +21,9 @@ public class ProductoRegistroView extends javax.swing.JFrame {
      */
     public ProductoRegistroView() {
         initComponents();
+        setLocationRelativeTo(null);
     }
+        
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,10 +46,11 @@ public class ProductoRegistroView extends javax.swing.JFrame {
         txtNombre = new javax.swing.JTextField();
         txtPrecio = new javax.swing.JTextField();
         txtStock = new javax.swing.JTextField();
+        btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(31, 115, 110));
 
         jLabel1.setText("REGISTRAR PRODUCTO");
 
@@ -59,11 +62,26 @@ public class ProductoRegistroView extends javax.swing.JFrame {
 
         jLabel5.setText("Stock:");
 
+        btnGuardar.setBackground(new java.awt.Color(31, 248, 110));
         btnGuardar.setText("Guardar");
         btnGuardar.addActionListener(this::btnGuardarActionPerformed);
 
+        btnCancelar.setBackground(new java.awt.Color(31, 248, 110));
         btnCancelar.setText("Cancelar");
         btnCancelar.addActionListener(this::btnCancelarActionPerformed);
+
+        txtId.setBackground(new java.awt.Color(119, 250, 255));
+
+        txtNombre.setBackground(new java.awt.Color(119, 250, 255));
+
+        txtPrecio.setBackground(new java.awt.Color(119, 250, 255));
+
+        txtStock.setBackground(new java.awt.Color(119, 250, 255));
+
+        btnRegresar.setBackground(new java.awt.Color(204, 255, 255));
+        btnRegresar.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
+        btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(this::btnRegresarActionPerformed);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,8 +98,10 @@ public class ProductoRegistroView extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(15, 15, 15)
                                 .addComponent(btnGuardar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(btnCancelar))
+                                .addGap(40, 40, 40)
+                                .addComponent(btnCancelar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                                .addComponent(btnRegresar))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(jLabel3)
@@ -93,9 +113,8 @@ public class ProductoRegistroView extends javax.swing.JFrame {
                                     .addComponent(txtId)
                                     .addComponent(txtNombre)
                                     .addComponent(txtPrecio)
-                                    .addComponent(txtStock, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
-                                .addGap(0, 0, Short.MAX_VALUE)))))
-                .addGap(28, 28, 28))
+                                    .addComponent(txtStock, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))))))
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -120,7 +139,8 @@ public class ProductoRegistroView extends javax.swing.JFrame {
                 .addGap(82, 82, 82)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnGuardar)
-                    .addComponent(btnCancelar))
+                    .addComponent(btnCancelar)
+                    .addComponent(btnRegresar))
                 .addGap(0, 12, Short.MAX_VALUE))
         );
 
@@ -140,31 +160,69 @@ public class ProductoRegistroView extends javax.swing.JFrame {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
 try {
-    int id = Integer.parseInt(txtId.getText().trim());
-    String nombre = txtNombre.getText().trim();
-    double precio = Double.parseDouble(txtPrecio.getText().trim());
-    int stock = Integer.parseInt(txtStock.getText().trim());
+            int id = Integer.parseInt(txtId.getText().trim());
+            String nombre = txtNombre.getText().trim();
+            double precio = Double.parseDouble(txtPrecio.getText().trim());
+            int stock = Integer.parseInt(txtStock.getText().trim());
 
-    if (nombre.isEmpty()) {
-        JOptionPane.showMessageDialog(this, "El nombre no puede estar vacío.");
-        return;
-    }
+            if (nombre.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "El nombre no puede estar vacío.");
+                return;
+            }
 
-    boolean exito = productoController.agregarAlmacen(id, nombre, precio, stock);
-    if (exito) {
-        JOptionPane.showMessageDialog(this, "Producto registrado correctamente.");
-        this.dispose(); // Cierra la ventanita al terminar de guardar
-    } else {
-        JOptionPane.showMessageDialog(this, "Error: Verifica que el precio sea mayor a 0 y el stock no sea negativo.");
-    }
-} catch (NumberFormatException e) {
-    JOptionPane.showMessageDialog(this, "Error: ID y Stock deben ser enteros, y Precio debe ser un número.");
-}        // TODO add your handling code here:
+            boolean exito = productoController.agregarAlmacen(id, nombre, precio, stock);
+            
+            if (exito) {
+                txtId.setText("");
+                txtNombre.setText("");
+                txtPrecio.setText("");
+                txtStock.setText("");
+
+                Object[] opciones = {"Ver Lista de Stock", "Seguir Agregando"};
+ 
+                int eleccion = JOptionPane.showOptionDialog(this,
+                        "Producto registrado correctamente.\n¿Qué deseas hacer ahora?",
+                        "Guardado Exitoso",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        opciones,
+                        opciones[1]); 
+
+                if (eleccion == JOptionPane.YES_OPTION) {
+
+                    new ProductoView().setVisible(true);
+                    this.dispose(); // Cierra la ventana de registro
+                }
+  
+
+            } else {
+                JOptionPane.showMessageDialog(this, "Error: Verifica que el precio sea mayor a 0 y el stock no sea negativo.");
+            }
+        } catch (NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Error: ID y Stock deben ser enteros, y Precio debe ser un número.");
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-this.dispose(); // Cierra solo esta ventana sin apagar todo el programa        // TODO add your handling code here:
+int respuesta = JOptionPane.showConfirmDialog(this, 
+                "Si sales, todo lo agregado se cancelará.\n¿Estás seguro de que deseas regresar?", 
+                "Confirmar cancelación", 
+                JOptionPane.YES_NO_OPTION, 
+                JOptionPane.WARNING_MESSAGE);
+        
+        if (respuesta == JOptionPane.YES_OPTION) {
+            new ProductoView().setVisible(true);
+            this.dispose(); 
+        }
+
     }//GEN-LAST:event_btnCancelarActionPerformed
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+new ProductoMenuView().setVisible(true);
+        this.dispose();
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,6 +252,7 @@ this.dispose(); // Cierra solo esta ventana sin apagar todo el programa        /
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

@@ -1,18 +1,17 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package edu.poo.gestionnegocio.view;
+ */package edu.poo.sis401s.gestor.view;
 
 /**
  *
  * @author yeyos
  */
 
-import edu.poo.gestionnegocio.model.Reserva;
-import edu.poo.gestionnegocio.repository.ReservaRepository;
-import edu.poo.gestionnegocio.services.ReservaService;
-import edu.poo.gestionnegocio.controller.ReservaController;
+import edu.poo.sis401s.gestor.model.Reserva;
+import edu.poo.sis401s.gestor.repository.ReservaRepository;
+import edu.poo.sis401s.gestor.services.ReservaService;
+import edu.poo.sis401s.gestor.controller.ReservaController;
 
 import java.awt.BorderLayout;
 import javax.swing.*;
@@ -191,6 +190,113 @@ public class ReservaView extends JFrame {
                 JOptionPane.showMessageDialog(this, "Selecciona una reserva primero.");
             }
         });
+// Botón Editar Cantidad
+JButton btnEditarCantidad = new JButton("Editar Cantidad");
+
+btnEditarCantidad.addActionListener(e -> {
+
+    int fila = tabla.getSelectedRow();
+
+    if (fila >= 0) {
+
+        String codigo = (String) modeloTabla.getValueAt(fila, 0);
+
+        String nuevaCantidad = JOptionPane.showInputDialog(
+                this,
+                "Nueva cantidad:"
+        );
+
+        if (nuevaCantidad != null) {
+
+            try {
+
+                int cantidad = Integer.parseInt(nuevaCantidad);
+
+                Reserva reserva = service.buscarPorCodigo(codigo);
+
+                if (reserva != null) {
+
+                    reserva.setCantidad(cantidad);
+
+                    refrescarTabla();
+
+                    JOptionPane.showMessageDialog(
+                            this,
+                            "Cantidad actualizada correctamente."
+                    );
+                }
+
+            } catch (NumberFormatException ex) {
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Ingrese una cantidad válida."
+                );
+            }
+        }
+
+    } else {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Seleccione una reserva."
+        );
+    }
+});
+
+// Botón Editar Precio
+JButton btnEditarPrecio = new JButton("Editar Precio");
+
+btnEditarPrecio.addActionListener(e -> {
+
+    int fila = tabla.getSelectedRow();
+
+    if (fila >= 0) {
+
+        String codigo = (String) modeloTabla.getValueAt(fila, 0);
+
+        String nuevoPrecio = JOptionPane.showInputDialog(
+                this,
+                "Nuevo precio:"
+        );
+
+        if (nuevoPrecio != null) {
+
+            try {
+
+                double precio = Double.parseDouble(nuevoPrecio);
+
+                Reserva reserva = service.buscarPorCodigo(codigo);
+
+                if (reserva != null) {
+
+                    reserva.setPrecio(precio);
+
+                    refrescarTabla();
+
+                    JOptionPane.showMessageDialog(
+                            this,
+                            "Precio actualizado correctamente."
+                    );
+                }
+
+            } catch (NumberFormatException ex) {
+
+                JOptionPane.showMessageDialog(
+                        this,
+                        "Ingrese un precio válido."
+                );
+            }
+        }
+
+    } else {
+
+        JOptionPane.showMessageDialog(
+                this,
+                "Seleccione una reserva."
+        );
+    }
+});
 
         // Botón Ver Historial
         JButton btnHistorial = new JButton("Ver Historial");
@@ -233,15 +339,20 @@ public class ReservaView extends JFrame {
 
         // Panel de botones
         JPanel panelBotones = new JPanel();
-        panelBotones.add(btnAgregar);
-        panelBotones.add(btnEditarEstatus);
-        panelBotones.add(btnEditarComentario);
-        panelBotones.add(btnHistorial);
-        panelBotones.add(btnExportarHistorial);
-        panelBotones.add(btnExportarReservas);
+
+panelBotones.add(btnAgregar);
+panelBotones.add(btnEditarCantidad);
+panelBotones.add(btnEditarPrecio);
+panelBotones.add(btnEditarEstatus);
+panelBotones.add(btnEditarComentario);
+panelBotones.add(btnHistorial);
+panelBotones.add(btnExportarHistorial);
+panelBotones.add(btnExportarReservas);
 
         add(panelBotones, BorderLayout.SOUTH);
-        refrescarTabla();
+
+service.verificarInventario();
+refrescarTabla();
     }
 
    private void refrescarTabla() {

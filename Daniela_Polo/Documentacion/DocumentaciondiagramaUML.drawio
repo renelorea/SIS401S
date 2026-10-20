@@ -13,11 +13,6 @@
         <mxCell id="FYfbNBW_tXnReo66tOUQ-20" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;ClienteController.java&quot; aria-label=&quot;ClienteController.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/controller/ClienteController.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(9, 105, 218) !important;&quot;&gt;ClienteController.java&lt;/a&gt;" vertex="1">
           <mxGeometry height="180" width="340" x="135" y="370" as="geometry" />
         </mxCell>
-        <mxCell id="FYfbNBW_tXnReo66tOUQ-80" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="FYfbNBW_tXnReo66tOUQ-73">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="560" y="620" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="FYfbNBW_tXnReo66tOUQ-21" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="&lt;a title=&quot;ClienteService.java&quot; aria-label=&quot;ClienteService.java, (File)&quot; class=&quot;Link--primary&quot; href=&quot;https://github.com/renelorea/SIS401S/blob/main/practicas/GestionNegocio/src/main/java/edu/poo/sis401s/gestor/services/ClienteService.java&quot; style=&quot;box-sizing: border-box; background-color: rgb(246, 248, 250); text-decoration: none; font-family: &amp;quot;Mona Sans VF&amp;quot;, -apple-system, BlinkMacSystemFont, &amp;quot;Segoe UI&amp;quot;, &amp;quot;Noto Sans Backtick Fix&amp;quot;, &amp;quot;Noto Sans&amp;quot;, Helvetica, Arial, sans-serif, &amp;quot;Apple Color Emoji&amp;quot;, &amp;quot;Segoe UI Emoji&amp;quot;; font-size: 14px; white-space: nowrap; color: rgb(31, 35, 40) !important;&quot;&gt;ClienteService.java&lt;/a&gt;" vertex="1">
           <mxGeometry height="230" width="320" x="150" y="670" as="geometry" />
         </mxCell>
@@ -77,27 +72,6 @@
         </mxCell>
         <mxCell id="FYfbNBW_tXnReo66tOUQ-72" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.087;entryY=0.562;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-21">
           <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="FYfbNBW_tXnReo66tOUQ-73" parent="1" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Condition" vertex="1">
-          <mxGeometry height="60" width="110" x="560" y="550" as="geometry" />
-        </mxCell>
-        <mxCell id="FYfbNBW_tXnReo66tOUQ-74" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-73" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.816;entryY=0.007;entryDx=0;entryDy=0;entryPerimeter=0;" target="FYfbNBW_tXnReo66tOUQ-20" value="no">
-          <mxGeometry relative="1" x="-1" as="geometry">
-            <mxPoint x="650" y="510" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="FYfbNBW_tXnReo66tOUQ-75" edge="1" parent="1" source="FYfbNBW_tXnReo66tOUQ-73" style="edgeStyle=orthogonalEdgeStyle;html=1;align=left;verticalAlign=top;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;entryX=0.703;entryY=-0.012;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" target="FYfbNBW_tXnReo66tOUQ-22" value="yes">
-          <mxGeometry relative="1" x="-1" as="geometry">
-            <Array as="points">
-              <mxPoint x="640" y="595" />
-              <mxPoint x="640" y="892.6" />
-              <mxPoint x="630" y="892.6" />
-              <mxPoint x="630" y="1175.2" />
-              <mxPoint x="458.5" y="1175.2" />
-            </Array>
-            <mxPoint x="640" y="609.9981818181817" as="sourcePoint" />
-            <mxPoint x="640" y="1175.18" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="FYfbNBW_tXnReo66tOUQ-78" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="+Cliente(...)&lt;div&gt;+getters()ySetters()&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="220" x="165" y="1470" as="geometry" />

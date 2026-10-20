@@ -1,17 +1,20 @@
 package edu.poo.sis401s.gestor.services;
 
+import edu.poo.sis401s.gestor.model.PedidoOrderLine;
+import edu.poo.sis401s.gestor.model.PedidoYProducto;
+import edu.poo.sis401s.gestor.repository.PedidoRepository;
 import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 
-public final class Service {
-    private final Repository repository;
+public final class PedidoService {
+    private final PedidoRepository repository;
 
-    public Service(Repository repository) {
+    public PedidoService(PedidoRepository repository) {
         this.repository = repository;
     }
 
-    public List<Product> getProducts() {
+    public List<PedidoYProducto> getProducts() {
         return repository.findAll();
     }
 
@@ -19,10 +22,10 @@ public final class Service {
         return repository.hasPendingOrder(productId);
     }
 
-    public void placeSupplierOrder(List<OrderLine> lines) {
+    public void placeSupplierOrder(List<PedidoOrderLine> lines) {
         requireNonEmpty(lines, "Add at least one product to the order.");
-        for (OrderLine line : lines) {
-            Product product = repository.findById(line.getProductId())
+        for (PedidoOrderLine line : lines) {
+            PedidoYProducto product = repository.findById(line.getProductId())
                     .orElseThrow(() -> new IllegalArgumentException(
                             "No product has ID " + line.getProductId() + "."));
             if (!product.getName().equalsIgnoreCase(line.getProductName().trim())) {
@@ -34,40 +37,40 @@ public final class Service {
         repository.recordSupplierOrder(lines);
     }
 
-    public Product getProduct(String productId) {
+    public PedidoYProducto getProduct(String productId) {
         return repository.findById(productId)
                 .orElseThrow(() -> new IllegalArgumentException("Unknown product ID: " + productId));
     }
 
-    public OrderLine createCustomerLine(String productId, int quantity) {
-        Product product = getProduct(productId);
+    public PedidoOrderLine createCustomerLine(String productId, int quantity) {
+        PedidoYProducto product = getProduct(productId);
         validateAvailableQuantity(product, quantity);
-        return new OrderLine(product.getId(), product.getName(), quantity, product.getPrice());
+        return new PedidoOrderLine(product.getId(), product.getName(), quantity, product.getPrice());
     }
 
-    public void changeCustomerQuantity(OrderLine line, int quantity) {
-        Product product = getProduct(line.getProductId());
+    public void changeCustomerQuantity(PedidoOrderLine line, int quantity) {
+        PedidoYProducto product = getProduct(line.getProductId());
         validateAvailableQuantity(product, quantity);
         line.setQuantity(quantity);
     }
 
-    public BigDecimal calculateTotal(Collection<OrderLine> lines) {
+    public BigDecimal calculateTotal(Collection<PedidoOrderLine> lines) {
         requireNonEmpty(lines, "Carrito Vacio.");
         BigDecimal total = BigDecimal.ZERO;
-        for (OrderLine line : lines) {
-            Product product = getProduct(line.getProductId());
+        for (PedidoOrderLine line : lines) {
+            PedidoYProducto product = getProduct(line.getProductId());
             validateAvailableQuantity(product, line.getQuantity());
             total = total.add(product.getPrice().multiply(BigDecimal.valueOf(line.getQuantity())));
         }
         return total;
     }
 
-    public void completeCustomerPurchase(Collection<OrderLine> lines) {
+    public void completeCustomerPurchase(Collection<PedidoOrderLine> lines) {
         calculateTotal(lines);
         repository.deductStock(lines);
     }
 
-    private static void validateAvailableQuantity(Product product, int quantity) {
+    private static void validateAvailableQuantity(PedidoYProducto product, int quantity) {
         requirePositive(quantity);
         if (quantity > product.getQuantity()) {
             throw new IllegalArgumentException("Only " + product.getQuantity()

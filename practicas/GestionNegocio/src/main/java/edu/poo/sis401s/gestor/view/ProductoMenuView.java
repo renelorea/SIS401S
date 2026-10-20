@@ -17,9 +17,11 @@ public class ProductoMenuView extends javax.swing.JFrame {
      */
     public ProductoMenuView() {
         initComponents();
+        setLocationRelativeTo(null);
     }
     public ProductoMenuView(String rol) {
         initComponents();
+        setLocationRelativeTo(null);
         if (rol != null && rol.equalsIgnoreCase("Empleado")) {
             btnIrRegistro.setVisible(false);
         }
@@ -42,19 +44,24 @@ public class ProductoMenuView extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(31, 115, 110));
 
+        jLabel1.setBackground(new java.awt.Color(31, 70, 110));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("SISTEMA DE INVENTARIO");
+        jLabel1.setOpaque(true);
 
+        btnIrRegistro.setBackground(new java.awt.Color(31, 222, 110));
         btnIrRegistro.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnIrRegistro.setText("Registrar Mercancía");
         btnIrRegistro.addActionListener(this::btnIrRegistroActionPerformed);
 
+        btnIrStock.setBackground(new java.awt.Color(31, 208, 110));
         btnIrStock.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnIrStock.setText("Ver Lista de Stock");
         btnIrStock.addActionListener(this::btnIrStockActionPerformed);
 
+        btnSalir.setBackground(new java.awt.Color(31, 142, 110));
         btnSalir.setText("Salir");
         btnSalir.addActionListener(this::btnSalirActionPerformed);
 
@@ -63,33 +70,34 @@ public class ProductoMenuView extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(140, 140, 140)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(140, 140, 140)
-                        .addComponent(btnIrRegistro))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(206, 206, 206)
-                        .addComponent(btnSalir))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(149, 149, 149)
-                        .addComponent(btnIrStock)))
-                .addContainerGap(151, Short.MAX_VALUE))
+                    .addComponent(jLabel1)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnIrRegistro)
+                        .addGap(16, 16, 16)))
+                .addContainerGap(129, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnIrStock)
+                .addGap(155, 155, 155))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalir)
+                .addGap(226, 226, 226))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addGap(15, 15, 15)
                 .addComponent(jLabel1)
-                .addGap(37, 37, 37)
+                .addGap(30, 30, 30)
                 .addComponent(btnIrRegistro)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(btnIrStock)
-                .addGap(28, 28, 28)
+                .addGap(18, 18, 18)
                 .addComponent(btnSalir)
-                .addContainerGap())
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -107,15 +115,21 @@ public class ProductoMenuView extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIrRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrRegistroActionPerformed
-new ProductoRegistroView().setVisible(true);        // TODO add your handling code here:
+new ProductoRegistroView().setVisible(true);
+this.dispose();
+// TODO add your handling code here:
     }//GEN-LAST:event_btnIrRegistroActionPerformed
 
     private void btnIrStockActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIrStockActionPerformed
-new ProductoView().setVisible(true);        // TODO add your handling code here:
+new ProductoView().setVisible(true);
+this.dispose();
+// TODO add your handling code here:
     }//GEN-LAST:event_btnIrStockActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-this.dispose();        // TODO add your handling code here:
+this.dispose();
+
+// TODO add your handling code here:
     }//GEN-LAST:event_btnSalirActionPerformed
 
     /**
