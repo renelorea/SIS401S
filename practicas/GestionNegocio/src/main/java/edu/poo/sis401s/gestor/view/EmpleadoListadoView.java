@@ -5,7 +5,7 @@
 package edu.poo.sis401s.gestor.view;
 
 import edu.poo.sis401s.gestor.model.Empleado;
-import edu.poo.sis401s.gestor.services.EmpleadoService;
+import edu.poo.sis401s.gestor.controller.EmpleadoController;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -22,13 +22,13 @@ import javax.swing.table.DefaultTableModel;
  */
 public class EmpleadoListadoView extends JDialog {
 
-    private final EmpleadoService service;
+    private final EmpleadoController controlador;
     private final DefaultTableModel modelo;
     private final JLabel lblTotal = new JLabel();
 
-    public EmpleadoListadoView(Frame owner, EmpleadoService service) {
+    public EmpleadoListadoView(Frame owner, EmpleadoController controlador) {
         super(owner, "Lista de empleados", true);
-        this.service = service;
+        this.controlador = controlador;
         String[] columnas = {"ID", "Nombre", "Edad", "Puesto", "Salario",
             "Teléfono", "Dirección", "Fecha de ingreso"};
         modelo = new DefaultTableModel(columnas, 0) {
@@ -65,7 +65,7 @@ public class EmpleadoListadoView extends JDialog {
     private void cargarDatos() {
         modelo.setRowCount(0);
         int total = 0;
-        for (Empleado e : service.obtenerTodos()) {
+        for (Empleado e : controlador.obtenerTodosEmpleados()) {
             modelo.addRow(new Object[]{e.getId(), e.getNombre(), e.getEdad(),
                 e.getPuesto(), e.getSalario(), e.getTelefono(),
                 e.getDireccion(), e.getFechaIngreso()});

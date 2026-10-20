@@ -5,7 +5,7 @@
 package edu.poo.sis401s.gestor.view;
 
 import edu.poo.sis401s.gestor.model.Empleado;
-import edu.poo.sis401s.gestor.services.EmpleadoService;
+import edu.poo.sis401s.gestor.controller.EmpleadoController;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -22,15 +22,15 @@ import javax.swing.JTextField;
  */
 public class EmpleadoModificarView extends JDialog {
 
-    private final EmpleadoService service;
+    private final EmpleadoController controlador;
     private final JTextField txtId = new JTextField();
     private final JLabel lblNombre = new JLabel("-");
     private final JTextField txtPuesto = new JTextField();
     private final JTextField txtSalario = new JTextField();
 
-    public EmpleadoModificarView(Frame owner, EmpleadoService service) {
+    public EmpleadoModificarView(Frame owner, EmpleadoController controlador) {
         super(owner, "Modificar empleado", true);
-        this.service = service;
+        this.controlador = controlador;
         construir();
     }
 
@@ -72,7 +72,7 @@ public class EmpleadoModificarView extends JDialog {
             EmpleadoUtilidadesView.error(this, "Escribe un ID válido (número entero).");
             return;
         }
-        Empleado e = service.buscarPorId(id);
+        Empleado e = controlador.buscarEmpleadoPorId(id);
         if (e == null) {
             EmpleadoUtilidadesView.error(this, "No se encontró ningún empleado con ese ID.");
             return;
@@ -97,7 +97,7 @@ public class EmpleadoModificarView extends JDialog {
             EmpleadoUtilidadesView.error(this, "El salario debe ser un número mayor a 0.");
             return;
         }
-        if (service.modificarEmpleado(id, txtPuesto.getText().trim(), salario)) {
+        if (controlador.modificarEmpleado(id, txtPuesto.getText().trim(), salario)) {
             EmpleadoUtilidadesView.info(this, "Empleado modificado correctamente.");
         } else {
             EmpleadoUtilidadesView.error(this, "No se encontró ningún empleado con ese ID.");

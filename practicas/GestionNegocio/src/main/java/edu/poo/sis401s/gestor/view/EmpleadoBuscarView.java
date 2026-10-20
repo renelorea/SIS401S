@@ -5,7 +5,7 @@
 package edu.poo.sis401s.gestor.view;
 
 import edu.poo.sis401s.gestor.model.Empleado;
-import edu.poo.sis401s.gestor.services.EmpleadoService;
+import edu.poo.sis401s.gestor.controller.EmpleadoController;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -23,13 +23,13 @@ import javax.swing.JTextField;
  */
 public class EmpleadoBuscarView extends JDialog {
 
-    private final EmpleadoService service;
+    private final EmpleadoController controlador;
     private final JTextField txtId = new JTextField(10);
     private final JTextArea txtResultado = new JTextArea(9, 30);
 
-    public EmpleadoBuscarView(Frame owner, EmpleadoService service) {
+    public EmpleadoBuscarView(Frame owner, EmpleadoController controlador) {
         super(owner, "Buscar empleado por ID", true);
-        this.service = service;
+        this.controlador = controlador;
         construir();
     }
 
@@ -66,7 +66,7 @@ public class EmpleadoBuscarView extends JDialog {
             EmpleadoUtilidadesView.error(this, "Escribe un ID válido (número entero).");
             return;
         }
-        Empleado e = service.buscarPorId(id);
+        Empleado e = controlador.buscarEmpleadoPorId(id);
         if (e == null) {
             txtResultado.setText("");
             EmpleadoUtilidadesView.error(this, "No se encontró ningún empleado con ese ID.");

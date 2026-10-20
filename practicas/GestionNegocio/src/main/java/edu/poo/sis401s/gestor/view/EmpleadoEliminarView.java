@@ -5,7 +5,7 @@
 package edu.poo.sis401s.gestor.view;
 
 import edu.poo.sis401s.gestor.model.Empleado;
-import edu.poo.sis401s.gestor.services.EmpleadoService;
+import edu.poo.sis401s.gestor.controller.EmpleadoController;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -21,12 +21,12 @@ import javax.swing.JTextField;
  */
 public class EmpleadoEliminarView extends JDialog {
 
-    private final EmpleadoService service;
+    private final EmpleadoController controlador;
     private final JTextField txtId = new JTextField(10);
 
-    public EmpleadoEliminarView(Frame owner, EmpleadoService service) {
+    public EmpleadoEliminarView(Frame owner, EmpleadoController controlador) {
         super(owner, "Eliminar empleado", true);
-        this.service = service;
+        this.controlador = controlador;
         construir();
     }
 
@@ -58,7 +58,7 @@ public class EmpleadoEliminarView extends JDialog {
             EmpleadoUtilidadesView.error(this, "Escribe un ID válido (número entero).");
             return;
         }
-        Empleado e = service.buscarPorId(id);
+        Empleado e = controlador.buscarEmpleadoPorId(id);
         if (e == null) {
             EmpleadoUtilidadesView.error(this, "No se encontró ningún empleado con ese ID.");
             return;
@@ -67,7 +67,7 @@ public class EmpleadoEliminarView extends JDialog {
                 "¿Seguro que quieres eliminar a " + e.getNombre() + " (ID " + e.getId() + ")?",
                 "Confirmar eliminación", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
         if (respuesta == JOptionPane.YES_OPTION) {
-            if (service.eliminarEmpleado(id)) {
+            if (controlador.eliminarEmpleado(id)) {
                 EmpleadoUtilidadesView.info(this, "Empleado eliminado correctamente.");
                 txtId.setText("");
             } else {

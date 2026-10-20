@@ -5,7 +5,7 @@
 package edu.poo.sis401s.gestor.view;
 
 import edu.poo.sis401s.gestor.model.Empleado;
-import edu.poo.sis401s.gestor.services.EmpleadoService;
+import edu.poo.sis401s.gestor.controller.EmpleadoController;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import java.awt.Frame;
@@ -22,7 +22,7 @@ import javax.swing.JTextField;
  */
 public class EmpleadoAgregarView extends JDialog {
 
-    private final EmpleadoService service;
+    private final EmpleadoController controlador;
     private final JTextField txtId = new JTextField();
     private final JTextField txtNombre = new JTextField();
     private final JTextField txtEdad = new JTextField();
@@ -32,9 +32,9 @@ public class EmpleadoAgregarView extends JDialog {
     private final JTextField txtDireccion = new JTextField();
     private final JTextField txtFecha = new JTextField();
 
-    public EmpleadoAgregarView(Frame owner, EmpleadoService service) {
+    public EmpleadoAgregarView(Frame owner, EmpleadoController controlador) {
         super(owner, "Agregar empleado", true);
-        this.service = service;
+        this.controlador = controlador;
         construir();
     }
 
@@ -84,7 +84,7 @@ public class EmpleadoAgregarView extends JDialog {
             EmpleadoUtilidadesView.error(this, "El ID debe ser un número entero positivo.");
             return;
         }
-        if (service.buscarPorId(id) != null) {
+        if (controlador.buscarEmpleadoPorId(id) != null) {
             EmpleadoUtilidadesView.error(this, "Ya existe un empleado con ese ID.");
             return;
         }
@@ -124,7 +124,7 @@ public class EmpleadoAgregarView extends JDialog {
         Empleado nuevo = new Empleado(id, txtNombre.getText().trim(), edad,
                 txtPuesto.getText().trim(), salario, telefono,
                 txtDireccion.getText().trim(), fecha);
-        service.agregarEmpleado(nuevo);
+        controlador.agregarEmpleado(nuevo);
         EmpleadoUtilidadesView.info(this, "Empleado registrado correctamente.");
         limpiar();
     }

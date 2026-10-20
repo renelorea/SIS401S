@@ -18,7 +18,7 @@ public class Empleado {
     private String direccion;
     private String fechaIngreso;
     //Agregue atributos edad, telefono, direccion y fecha de ingreso.
-    public Empleado(int id, String nombre,int Edad, String puesto, double salario, String telefono, String direccion, String fechaIngreso) {
+    public Empleado(int id, String nombre,int edad, String puesto, double salario, String telefono, String direccion, String fechaIngreso) {
         this.id = id;
         this.nombre = nombre;
         this.edad = edad;
