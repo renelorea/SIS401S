@@ -17,6 +17,8 @@ public class Cliente {
     private String telefono;
     private String tipoPerfil;
     private LocalDate fechaRegistro;
+    private String rfc;
+    private String direccion;
    
 
     public Cliente(int id, String nombre, String correo, String telefono) {
@@ -26,14 +28,18 @@ public class Cliente {
         this.telefono = telefono;
         this.tipoPerfil = "Persona";
         this.fechaRegistro = LocalDate.now();
+        this.rfc = "XAXX010101000"; 
+        this.direccion = "Sin dirección";
     }
-    public Cliente(int id, String nombre, String correo, String telefono, String tipoPerfil, LocalDate fechaRegistro){
+    public Cliente(int id, String nombre, String correo, String telefono, String tipoPerfil, LocalDate fechaRegistro, String rfc, String direccion){
         this.id = id;
         this.nombre = nombre;
         this.correo = correo;
         this.telefono = telefono;
         this.tipoPerfil = tipoPerfil;
         this.fechaRegistro = fechaRegistro;
+        this.rfc = rfc;
+        this.direccion = direccion;
     }
      public int getId() { return id; }
     public void setId(int id) { this.id = id; }
@@ -52,6 +58,12 @@ public class Cliente {
 
     public LocalDate getFechaRegistro() { return fechaRegistro; }
     public void setFechaRegistro(LocalDate fechaRegistro) { this.fechaRegistro = fechaRegistro; }
+    
+    public String getRfc() { return rfc; }
+    public void setRfc(String rfc) { this.rfc = rfc; }
+    
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
 
     @Override
     public String toString() {
@@ -62,6 +74,8 @@ public class Cliente {
                 ", telefono='" + telefono + '\'' +
                 ", tipoPerfil='" + tipoPerfil + '\'' +
                 ", fechaRegistro=" + fechaRegistro +
+                ", rfc='" + rfc + '\'' +
+                ", direccion='" + direccion + '\'' +
                 '}';
     }
 

@@ -29,12 +29,16 @@ public class ClienteService {
     public List<Cliente> listarTodosLosClientes() {
         return clienteRepository.obtenerTodos();
     }
+    public boolean actualizarCliente(Cliente cliente) {
+        return clienteRepository.actualizar(cliente);
+    }
     public Cliente buscarCliente(int id) {
         return clienteRepository.buscarPorId(id);
     }
     public Cliente buscarClientePorNombre(String nombre) {
         return clienteRepository.buscarPorNombre(nombre);
     }
+    
     public boolean eliminarCliente(int id) {
         return clienteRepository.eliminar(id);
     }
