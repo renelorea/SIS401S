@@ -44,7 +44,11 @@ public final class PedidoRepository {
     public void deductStock(Collection<PedidoOrderLine> lines) {
         for (PedidoOrderLine line : lines) {
             PedidoYProducto product = products.get(line.getProductId());
-            //product.setQuantity(product.getQuantity() - line.getQuantity());
+            products.put(product.getId(), new PedidoYProducto(
+                    product.getId(),
+                    product.getName(),
+                    product.getPrice(),
+                    product.getQuantity() - line.getQuantity()));
         }
     }
 

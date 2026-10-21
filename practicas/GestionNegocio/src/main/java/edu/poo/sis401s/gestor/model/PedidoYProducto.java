@@ -35,7 +35,7 @@ public final class PedidoYProducto {
         return quantity;
     }
 
-    void setQuantity(int quantity) {
+    public void setQuantity(int quantity) {
         if (quantity < 0) {
             throw new IllegalArgumentException("La cantidad no debe de ser nula o negativa.");
         }

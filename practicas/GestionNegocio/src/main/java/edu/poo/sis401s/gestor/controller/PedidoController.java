@@ -33,8 +33,8 @@ public final class PedidoController {
         returnToTerminal = onBack;
         cart.clear();
         purchaseConfirmed = false;
-//        view.showCustomerWindow(service.getProducts(), List.of(), this::startSelecting,
-//                this::addSelectedProducts, this::openPurchaseWindow, this::backToTerminal);
+        view.showCustomerWindow(service.getProducts(), List.of(), this::startSelecting,
+                this::addSelectedProducts, this::openPurchaseWindow, this::backToTerminal);
     }
 
     private void openSupplierOrder() {
@@ -93,7 +93,7 @@ public final class PedidoController {
     }
 
     private void refreshInventory() {
-        //view.updateInventory(service.getProducts(), pendingOrderIds());
+        view.updateInventory(service.getProducts(), pendingOrderIds());
     }
 
     private void startSelecting() {
@@ -140,8 +140,8 @@ public final class PedidoController {
             return;
         }
         purchaseConfirmed = false;
-//        view.showPurchaseWindow(copyCart(), this::changeCustomerQuantity,
-//                this::removeCustomerProducts, this::confirmPurchase, this::returnFromPurchase);
+        view.showPurchaseWindow(copyCart(), this::changeCustomerQuantity,
+                this::removeCustomerProducts, this::confirmPurchase, this::returnFromPurchase);
     }
 
     private void changeCustomerQuantity() {
@@ -220,11 +220,11 @@ public final class PedidoController {
     }
 
     private void refreshCustomerWindow() {
-        //view.updateCustomerWindow(service.getProducts(), copyCart());
+        view.updateCustomerWindow(service.getProducts(), copyCart());
     }
 
     private void refreshPurchaseWindow() {
-        //view.updatePurchaseWindow(copyCart());
+        view.updatePurchaseWindow(copyCart());
     }
 
     private List<PedidoOrderLine> copyCart() {
