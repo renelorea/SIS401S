@@ -3,6 +3,19 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package edu.poo.sis401s.gestor.view;
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Font;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.JTextArea;
+import javax.swing.table.JTableHeader;
 
 /**
  *
@@ -19,8 +32,130 @@ public class VentaView1 extends javax.swing.JFrame {
     public VentaView1() {
         initComponents();
         actualizarTabla();
+       aplicarEstilo();
+        setLocationRelativeTo(null);
     }
+private void aplicarEstilo() {
+   Color azul = new Color(23, 36, 58);
+Color azulSecundario = new Color(38, 59, 86);
+Color turquesa = new Color(8, 127, 140);
+Color fondo = new Color(23, 36, 58);
+Color texto = Color.WHITE;
+Color blanco = new Color(38, 59, 86);
+    getContentPane().setBackground(fondo);
+    setTitle("Registro de Ventas");
 
+    aplicarEstiloComponentes(
+        getContentPane(), azul, azulSecundario,
+        turquesa, fondo, texto, blanco
+    );
+}
+
+private void aplicarEstiloComponentes(
+        Container contenedor,
+        Color azul,
+        Color azulSecundario,
+        Color turquesa,
+        Color fondo,
+        Color texto,
+        Color blanco) {
+
+    for (Component componente : contenedor.getComponents()) {
+
+        if (componente instanceof JPanel) {
+            componente.setBackground(fondo);
+
+        } else if (componente instanceof JLabel) {
+            JLabel etiqueta = (JLabel) componente;
+            etiqueta.setForeground(texto);
+
+            String titulo = etiqueta.getText();
+
+            if (titulo != null &&
+                titulo.toUpperCase().contains("REGISTRO DE VENTAS")) {
+
+                etiqueta.setForeground(Color.WHITE);
+                etiqueta.setFont(
+                    new Font("SansSerif", Font.BOLD, 28)
+                );
+            }
+
+        } else if (componente instanceof JTextField) {
+            JTextField campo = (JTextField) componente;
+            campo.setBackground(blanco);
+            campo.setForeground(texto);
+            campo.setCaretColor(turquesa);
+            campo.setFont(
+                new Font("SansSerif", Font.PLAIN, 14)
+            );
+            campo.setBorder(
+                BorderFactory.createCompoundBorder(
+                    BorderFactory.createLineBorder(
+                        new Color(203, 213, 225)
+                    ),
+                    BorderFactory.createEmptyBorder(5, 8, 5, 8)
+                )
+            );
+
+        } else if (componente instanceof JTextArea) {
+            JTextArea area = (JTextArea) componente;
+            area.setBackground(blanco);
+            area.setForeground(texto);
+            area.setFont(
+                new Font("SansSerif", Font.PLAIN, 13)
+            );
+
+        } else if (componente instanceof JButton) {
+            JButton boton = (JButton) componente;
+            boton.setBackground(turquesa);
+            boton.setForeground(azul);
+            boton.setFont(
+                new Font("SansSerif", Font.BOLD, 12)
+            );
+            boton.setFocusPainted(false);
+            boton.setOpaque(true);
+            boton.setBorder(
+                BorderFactory.createCompoundBorder(
+                    BorderFactory.createLineBorder(turquesa),
+                    BorderFactory.createEmptyBorder(8, 12, 8, 12)
+                )
+            );
+
+        } else if (componente instanceof JScrollPane) {
+            componente.setBackground(blanco);
+            ((JScrollPane) componente).getViewport()
+                .setBackground(blanco);
+
+        } else if (componente instanceof JTable) {
+            JTable tabla = (JTable) componente;
+            tabla.setBackground(blanco);
+            tabla.setForeground(texto);
+            tabla.setGridColor(new Color(226, 232, 240));
+            tabla.setSelectionBackground(turquesa);
+            tabla.setSelectionForeground(azul);
+            tabla.setRowHeight(26);
+            tabla.setFont(
+                new Font("SansSerif", Font.PLAIN, 12)
+            );
+
+            JTableHeader encabezado = tabla.getTableHeader();
+            encabezado.setBackground(azul);
+            encabezado.setForeground(blanco);
+            encabezado.setFont(
+                new Font("SansSerif", Font.BOLD, 12)
+            );
+            encabezado.setReorderingAllowed(false);
+        }
+
+        if (componente instanceof Container) {
+            aplicarEstiloComponentes(
+                (Container) componente,
+                azul, azulSecundario, turquesa,
+                fondo, texto, blanco
+            );
+        }
+    }
+}
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

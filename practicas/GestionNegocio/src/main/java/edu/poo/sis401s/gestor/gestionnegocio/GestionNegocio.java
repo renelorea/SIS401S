@@ -11,21 +11,28 @@ import edu.poo.sis401s.gestor.services.LoginService;
 import edu.poo.sis401s.gestor.view.LoginView;
 import edu.poo.sis401s.gestor.view.MainMenu;
 
-/**
- *
- * @author Hp
- */
 public class GestionNegocio {
+
     public static void main(String[] args) {
+
         UsuarioRepository repo = new UsuarioRepository();
         LoginService service = new LoginService(repo);
         LoginController controller = new LoginController(service);
-        LoginView view = new LoginView(controller);
 
-        Usuario u = view.mostrarLogin();
-        if (u != null) {
+        while (true) {
+
+            LoginView view = new LoginView(controller);
+            Usuario u = view.mostrarLogin();
+
+            if (u == null) {
+                System.out.println("Programa finalizado.");
+                break;
+            }
+
             MainMenu menu = new MainMenu(u);
             menu.mostrarMenu();
+
+            System.out.println("\nRegresando al inicio de sesión...");
         }
     }
 }
