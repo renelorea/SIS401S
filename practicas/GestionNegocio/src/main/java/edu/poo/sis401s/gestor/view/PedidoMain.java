@@ -27,8 +27,8 @@ public final class PedidoMain {
                 view.printTerminalMenu();
                 String choice = view.readTerminalChoice(scanner);
                 switch (choice.trim()) {
-                    case "1" -> runScreen(controller::openMerchandiseScreen);
-                    case "2" -> runScreen(controller::openCustomerScreen);
+                    case "1" -> runScreen(onClose -> controller.openMerchandiseScreen(onClose));
+                    case "2" -> runScreen(onClose -> controller.openCustomerScreen(onClose));
                     case "3" -> running = false;
                     default -> view.printTerminalMessage("Escribe y selecciona una opcion: 1, 2, o 3.");
                 }
