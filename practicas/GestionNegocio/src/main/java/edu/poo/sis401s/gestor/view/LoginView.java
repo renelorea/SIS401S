@@ -10,9 +10,10 @@ package edu.poo.sis401s.gestor.view;
  */
 import edu.poo.sis401s.gestor.controller.LoginController;
 import edu.poo.sis401s.gestor.model.Usuario;
-import java.util.Scanner;
 
 public class LoginView {
+    private static final int MAX_INTENTOS = 3;
+
     private LoginController controller;
 
     public LoginView(LoginController controller) {
@@ -20,20 +21,24 @@ public class LoginView {
     }
 
     public Usuario mostrarLogin() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Usuario: ");
-        String username = sc.nextLine();
-        System.out.print("Contraseña: ");
-        String password = sc.nextLine();
+        System.out.println("========================================");
+        System.out.println("   GESTIÓN DE NEGOCIO - INICIAR SESIÓN");
+        System.out.println("========================================");
 
-        Usuario u = controller.login(username, password);
-        if (u != null) {
-            System.out.println("Login exitoso. Rol: " + u.getRol());
-            return u;
-        } else {
-            System.out.println("Credenciales incorrectas.");
+        for (int intento = 1; intento <= MAX_INTENTOS; intento++) {
+            String username = ConsolaUtil.leerTexto("Usuario: ");
+            String password = ConsolaUtil.leerClave("Contraseña: ");
+
+            Usuario u = controller.login(username, password);
+            if (u != null) {
+                System.out.println("Login exitoso. Rol: " + u.getRol());
+                return u;
+            }
+            System.out.println("Credenciales incorrectas. Intento "
+                    + intento + " de " + MAX_INTENTOS + ".\n");
         }
+
+        System.out.println("Demasiados intentos fallidos. Saliendo del sistema...");
         return null;
     }
 }
-
