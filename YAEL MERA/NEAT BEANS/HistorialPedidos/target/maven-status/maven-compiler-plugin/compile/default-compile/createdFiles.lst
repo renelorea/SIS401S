@@ -1,0 +1,6 @@
+com\mycompany\historialpedidos\HistorialPedidos.class
+com\mycompany\historialpedidos\HistorialPedidos$1.class
+com\mycompany\historialpedidos\HistorialPedidos$Pedido.class
+com\mycompany\historialpedidos\HistorialPedidos$ItemPedido.class
+com\mycompany\historialpedidos\HistorialPedidos$EstatusRenderer.class
+com\mycompany\historialpedidos\HistorialPedidos$ComentarioRenderer.class

@@ -1,0 +1,84 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package edu.poo.sis401s.gestor.model;
+
+import java.time.LocalDate;
+
+/**
+ *
+ * @author Hp
+ */
+public class Cliente {
+    private int id;
+    private String nombre;
+    private String correo;
+    private String telefono;
+    private String tipoPerfil;
+    private LocalDate fechaRegistro;
+    private String rfc;
+    private String direccion;
+   
+
+    public Cliente(int id, String nombre, String correo, String telefono) {
+        this.id = id;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.tipoPerfil = "Persona";
+        this.fechaRegistro = LocalDate.now();
+        this.rfc = "XAXX010101000"; 
+        this.direccion = "Sin dirección";
+    }
+    public Cliente(int id, String nombre, String correo, String telefono, String tipoPerfil, LocalDate fechaRegistro, String rfc, String direccion){
+        this.id = id;
+        this.nombre = nombre;
+        this.correo = correo;
+        this.telefono = telefono;
+        this.tipoPerfil = tipoPerfil;
+        this.fechaRegistro = fechaRegistro;
+        this.rfc = rfc;
+        this.direccion = direccion;
+    }
+     public int getId() { return id; }
+    public void setId(int id) { this.id = id; }
+
+    public String getNombre() { return nombre; }
+    public void setNombre(String nombre) { this.nombre = nombre; }
+
+    public String getCorreo() { return correo; }
+    public void setCorreo(String correo) { this.correo = correo; }
+
+    public String getTelefono() { return telefono; }
+    public void setTelefono(String telefono) { this.telefono = telefono; }
+
+    public String getTipoPerfil() { return tipoPerfil; }
+    public void setTipoPerfil(String tipoPerfil) { this.tipoPerfil = tipoPerfil; }
+
+    public LocalDate getFechaRegistro() { return fechaRegistro; }
+    public void setFechaRegistro(LocalDate fechaRegistro) { this.fechaRegistro = fechaRegistro; }
+    
+    public String getRfc() { return rfc; }
+    public void setRfc(String rfc) { this.rfc = rfc; }
+    
+    public String getDireccion() { return direccion; }
+    public void setDireccion(String direccion) { this.direccion = direccion; }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", correo='" + correo + '\'' +
+                ", telefono='" + telefono + '\'' +
+                ", tipoPerfil='" + tipoPerfil + '\'' +
+                ", fechaRegistro=" + fechaRegistro +
+                ", rfc='" + rfc + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
+    }
+
+    // Getters y setters
+}
+
