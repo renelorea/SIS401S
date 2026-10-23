@@ -1,0 +1,45 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Página-1">
+    <mxGraphModel dx="2547" dy="946" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-3" parent="WIyWlLk6GJQsqaUBKTNV-1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;" value="Sistema de Gestion de Clientes" vertex="1">
+          <mxGeometry height="90" width="640" x="100" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-25" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ssGAUiIe_ZaJZpzhc14N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="ssGAUiIe_ZaJZpzhc14N-11">
+          <mxGeometry relative="1" x="0.0089" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-29" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ssGAUiIe_ZaJZpzhc14N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="ssGAUiIe_ZaJZpzhc14N-9">
+          <mxGeometry relative="1" x="0.0028" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-30" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ssGAUiIe_ZaJZpzhc14N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="ssGAUiIe_ZaJZpzhc14N-8">
+          <mxGeometry relative="1" x="0.0028" as="geometry">
+            <mxPoint x="160" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-31" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="ssGAUiIe_ZaJZpzhc14N-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="ssGAUiIe_ZaJZpzhc14N-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-4" parent="WIyWlLk6GJQsqaUBKTNV-1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Usuario del Sistema" vertex="1">
+          <mxGeometry height="60" width="30" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-8" parent="WIyWlLk6GJQsqaUBKTNV-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Registrar&amp;nbsp;&lt;div&gt;(ClienteController -&amp;gt;&lt;/div&gt;&lt;div&gt;ClienteService-&amp;gt;&lt;/div&gt;&lt;div&gt;registrar NuevoCliente)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="150" width="280" x="170" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-9" parent="WIyWlLk6GJQsqaUBKTNV-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Modificar Cliente" vertex="1">
+          <mxGeometry height="150" width="270" x="160" y="870" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-10" parent="WIyWlLk6GJQsqaUBKTNV-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Eliminar cliente" vertex="1">
+          <mxGeometry height="140" width="290" x="160" y="1070" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-11" parent="WIyWlLk6GJQsqaUBKTNV-1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="Consultar Directorio:&lt;div&gt;&quot;Buscar y actualizar&lt;/div&gt;&lt;div&gt;obtener TodosLosClientes o buscar Por Nombre&lt;/div&gt;" vertex="1">
+          <mxGeometry height="160" width="225" x="197.5" y="641" as="geometry" />
+        </mxCell>
+        <mxCell id="ssGAUiIe_ZaJZpzhc14N-12" parent="WIyWlLk6GJQsqaUBKTNV-1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" value="" vertex="1">
+          <mxGeometry height="808" width="703" x="68.5" y="410" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
