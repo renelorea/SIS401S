@@ -19,7 +19,14 @@ import edu.poo.sis401s.gestor.repository.ReservaRepository;
 import edu.poo.sis401s.gestor.services.EmpleadoService;
 import edu.poo.sis401s.gestor.services.PedidoService;
 import edu.poo.sis401s.gestor.services.ReservaService;
+import edu.poo.sis401s.gestor.view.MainMenuView.Opcion;
+import java.awt.GraphicsEnvironment;
+import java.util.List;
 
+/**
+ * Menú principal. Arma la lista de opciones según el rol y la muestra en una ventana
+ * (MainMenuView). Si el equipo no tiene pantalla, la misma lista se muestra como menú de texto.
+ */
 public class MainMenu {
     private Usuario usuario;
 
@@ -30,106 +37,163 @@ public class MainMenu {
     private PedidoController pedidoController;
     private EmpleadoController empleadoController;
 
+    // Ventana del menú; es null cuando se usa el menú de texto
+    private MainMenuView ventana;
+
     public MainMenu(Usuario usuario) {
         this.usuario = usuario;
     }
 
     public void mostrarMenu() {
-        System.out.println("\nBienvenido " + usuario.getUsername() + " - Rol: " + usuario.getRol());
-
         String rol = usuario.getRol() == null ? "" : usuario.getRol().toLowerCase();
-        switch (rol) {
-            case "admin":
-                menuAdmin();
-                break;
-            case "empleado":
-                menuEmpleado();
-                break;
-            case "cliente":
-                menuCliente();
-                break;
-            default:
-                System.out.println("Rol no reconocido.");
+        List<Opcion> opciones = opcionesDelRol(rol);
+        if (opciones.isEmpty()) {
+            System.out.println("Rol no reconocido.");
+            return;
+        }
+
+        String nombreRol = nombreDelRol(rol);
+        if (GraphicsEnvironment.isHeadless()) {
+            System.out.println("\nBienvenido " + usuario.getUsername() + " - Rol: " + usuario.getRol());
+            mostrarMenuTexto(nombreRol, opciones);
+        } else {
+            mostrarMenuVentana(nombreRol, opciones);
         }
     }
 
-    private void menuAdmin() {
-        int opcion;
-        do {
-            System.out.println("\n=== Menú Administrador ===");
-            System.out.println("1. Gestionar Inventario");
-            System.out.println("2. Gestionar Empleados");
-            System.out.println("3. Reportes Financieros");
-            System.out.println("4. Gestionar Clientes");
-            System.out.println("5. Encuestas de Satisfacción");
-            System.out.println("6. Salir");
-            opcion = ConsolaUtil.leerEntero("Elige una opción: ", 1, 6);
+    // ------------------------------------------------------------------
+    // Opciones de cada rol (las usan la ventana y el menú de texto)
+    // ------------------------------------------------------------------
 
-            switch (opcion) {
-                case 1 -> VentanaUtil.abrirYEsperar(() -> new ProductoMenuView("Admin").setVisible(true));
-                case 2 -> abrirEmpleados();
-                case 3 -> VentanaUtil.abrirYEsperar(() -> new ReporteFinancieroView().setVisible(true));
-                case 4 -> VentanaUtil.abrirYEsperar(() -> new ClienteView("Admin").setVisible(true));
-                case 5 -> abrirEncuestas();
-                default -> despedirse();
-            }
-        } while (opcion != 6);
+    private List<Opcion> opcionesDelRol(String rol) {
+        return switch (rol) {
+            case "admin" -> List.of(
+                    new Opcion("Gestionar Inventario", "Registrar y consultar los productos",
+                            () -> abrirVentana(() -> new ProductoMenuView("Admin").setVisible(true))),
+                    new Opcion("Gestionar Empleados", "Altas, bajas, búsqueda y cambios de empleados",
+                            this::abrirEmpleados),
+                    new Opcion("Reportes Financieros", "Consultar los reportes del negocio",
+                            () -> abrirVentana(() -> new ReporteFinancieroView().setVisible(true))),
+                    new Opcion("Gestionar Clientes", "Registrar, buscar y actualizar clientes",
+                            () -> abrirVentana(() -> new ClienteView("Admin").setVisible(true))),
+                    new Opcion("Encuestas de Satisfacción", "Ver, registrar y eliminar encuestas",
+                            this::abrirEncuestas));
+            case "empleado" -> List.of(
+                    new Opcion("Registrar Venta", "Abrir la pantalla de ventas",
+                            () -> abrirVentana(() -> new VentaView1().setVisible(true))),
+                    new Opcion("Gestionar Pedidos", "Consultar y gestionar pedidos",
+                            () -> abrirVentana(() -> pedidos().openMerchandiseScreen(() -> { }))),
+                    new Opcion("Consultar Inventario", "Ver los productos disponibles",
+                            () -> abrirVentana(() -> new ProductoView("Empleado").setVisible(true))),
+                    new Opcion("Consultar Clientes", "Ver la lista de clientes",
+                            () -> abrirVentana(() -> new ClienteView("Empleado").setVisible(true))));
+            case "cliente" -> List.of(
+                    new Opcion("Reservar Servicio", "Hacer una reservación",
+                            this::abrirReservas),
+                    new Opcion("Responder Encuesta de Satisfacción",
+                            "Calificar tu experiencia y dejar un comentario", this::abrirEncuestas),
+                    new Opcion("Consultar Pedidos", "Ver tus pedidos",
+                            () -> abrirVentana(() -> pedidos().openCustomerScreen(() -> { }))));
+            default -> List.of();
+        };
     }
 
-    private void menuEmpleado() {
-        int opcion;
-        do {
-            System.out.println("\n=== Menú Empleado ===");
-            System.out.println("1. Registrar Venta");
-            System.out.println("2. Gestionar Pedidos");
-            System.out.println("3. Consultar Inventario");
-            System.out.println("4. Consultar Clientes");
-            System.out.println("5. Salir");
-            opcion = ConsolaUtil.leerEntero("Elige una opción: ", 1, 5);
-
-            switch (opcion) {
-                case 1 -> VentanaUtil.abrirYEsperar(() -> new VentaView1().setVisible(true));
-                case 2 -> VentanaUtil.abrirYEsperar(() -> pedidos().openMerchandiseScreen(() -> { }));
-                case 3 -> VentanaUtil.abrirYEsperar(() -> new ProductoView("Empleado").setVisible(true));
-                case 4 -> VentanaUtil.abrirYEsperar(() -> new ClienteView("Empleado").setVisible(true));
-                default -> despedirse();
-            }
-        } while (opcion != 5);
+    private String nombreDelRol(String rol) {
+        return switch (rol) {
+            case "admin" -> "Administrador";
+            case "empleado" -> "Empleado";
+            default -> "Cliente";
+        };
     }
 
-    private void menuCliente() {
+    // ------------------------------------------------------------------
+    // Las dos formas de mostrar el menú
+    // ------------------------------------------------------------------
+
+    private void mostrarMenuVentana(String nombreRol, List<Opcion> opciones) {
+        VentanaUtil.enHiloSwing(() -> ventana = new MainMenuView(usuario, nombreRol, opciones));
+        ventana.mostrar();
+        try {
+            // La ventana avisa qué botón se presionó; aquí (hilo principal) se abre esa opción
+            Opcion elegida = ventana.esperarOpcion();
+            while (elegida != null) {
+                RuntimeException fallo = null;
+                try {
+                    elegida.accion().run();
+                } catch (RuntimeException ex) {
+                    fallo = ex;
+                }
+                ventana.mostrar();
+                if (fallo != null) {
+                    ventana.avisar("No se pudo abrir esta opción: " + fallo.getMessage());
+                }
+                elegida = ventana.esperarOpcion();
+            }
+        } finally {
+            ventana.cerrar();
+            ventana = null;
+        }
+        despedirse();
+    }
+
+    private void mostrarMenuTexto(String nombreRol, List<Opcion> opciones) {
+        int salir = opciones.size() + 1;
         int opcion;
         do {
-            System.out.println("\n=== Menú Cliente ===");
-            System.out.println("1. Reservar Servicio");
-            System.out.println("2. Responder Encuesta de Satisfacción");
-            System.out.println("3. Consultar Pedidos");
-            System.out.println("4. Salir");
-            opcion = ConsolaUtil.leerEntero("Elige una opción: ", 1, 4);
-
-            switch (opcion) {
-                case 1 -> abrirReservas();
-                case 2 -> abrirEncuestas();
-                case 3 -> VentanaUtil.abrirYEsperar(() -> pedidos().openCustomerScreen(() -> { }));
-                default -> despedirse();
+            System.out.println("\n=== Menú " + nombreRol + " ===");
+            for (int i = 0; i < opciones.size(); i++) {
+                System.out.println((i + 1) + ". " + opciones.get(i).titulo());
             }
-        } while (opcion != 4);
+            System.out.println(salir + ". Salir");
+            opcion = ConsolaUtil.leerEntero("Elige una opción: ", 1, salir);
+
+            if (opcion == salir) {
+                despedirse();
+            } else {
+                opciones.get(opcion - 1).accion().run();
+            }
+        } while (opcion != salir);
+    }
+
+    // ------------------------------------------------------------------
+    // Abrir cada módulo
+    // ------------------------------------------------------------------
+
+    /**
+     * Abre una ventana de otro módulo y espera a que se cierre. Si el menú está en ventana,
+     * se oculta mientras tanto y vuelve cuando termina.
+     */
+    private void abrirVentana(Runnable abrir) {
+        if (ventana != null) {
+            ventana.ocultar();
+        }
+        boolean seAbrio = VentanaUtil.abrirYEsperar(abrir);
+        if (!seAbrio && ventana != null) {
+            ventana.mostrar();
+            ventana.avisar("Esta pantalla todavía no está disponible.");
+        }
     }
 
     /** Encuestas: se puede usar en modo texto (Scanner) o en ventana (JFrame). */
     private void abrirEncuestas() {
+        int modo = ventana != null ? ventana.preguntarModoEncuestas() : preguntarModoEncuestasEnTexto();
+
+        if (modo == 1) {
+            if (ventana != null) {
+                ventana.ocultar();
+            }
+            new EncuestaConsolaView(encuestaController, usuario).mostrar();
+        } else if (modo == 2) {
+            abrirVentana(() -> new EncuestaView(encuestaController, usuario).setVisible(true));
+        }
+    }
+
+    private int preguntarModoEncuestasEnTexto() {
         System.out.println("\n--- ENCUESTAS DE SATISFACCIÓN ---");
         System.out.println("1. Usar el menú de texto");
         System.out.println("2. Usar la ventana");
         System.out.println("0. Volver");
-        int modo = ConsolaUtil.leerEntero("Elige una opción: ", 0, 2);
-
-        if (modo == 1) {
-            new EncuestaConsolaView(encuestaController, usuario).mostrar();
-        } else if (modo == 2) {
-            VentanaUtil.abrirYEsperar(
-                    () -> new EncuestaView(encuestaController, usuario).setVisible(true));
-        }
+        return ConsolaUtil.leerEntero("Elige una opción: ", 0, 2);
     }
 
     private void abrirReservas() {
@@ -137,19 +201,18 @@ public class MainMenu {
             reservaService = new ReservaService(new ReservaRepository());
             reservaController = new ReservaController(reservaService);
         }
-        VentanaUtil.abrirYEsperar(
-                () -> new ReservaView(reservaController, reservaService).setVisible(true));
+        abrirVentana(() -> new ReservaView(reservaController, reservaService).setVisible(true));
     }
 
     private void abrirEmpleados() {
         if (empleadoController == null) {
             empleadoController = new EmpleadoController(new EmpleadoService(new EmpleadoRepository()));
         }
-        VentanaUtil.abrirYEsperar(() -> {
-            EmpleadoView ventana = new EmpleadoView(empleadoController);
+        abrirVentana(() -> {
+            EmpleadoView ventanaEmpleados = new EmpleadoView(empleadoController);
             // Su botón "Salir" termina todo el programa; aquí solo debe cerrar la ventana
-            VentanaUtil.botonSoloCierraVentana(ventana, "Salir");
-            ventana.mostrarMenu();
+            VentanaUtil.botonSoloCierraVentana(ventanaEmpleados, "Salir");
+            ventanaEmpleados.mostrarMenu();
         });
     }
 

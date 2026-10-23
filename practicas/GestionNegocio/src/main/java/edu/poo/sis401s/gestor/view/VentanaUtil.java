@@ -9,6 +9,7 @@ import java.awt.Window;
 import java.awt.event.ActionListener;
 import java.awt.event.AWTEventListener;
 import java.awt.event.WindowEvent;
+import java.lang.reflect.InvocationTargetException;
 import java.util.concurrent.CountDownLatch;
 import javax.swing.AbstractButton;
 import javax.swing.JFrame;
@@ -26,10 +27,16 @@ final class VentanaUtil {
     private VentanaUtil() {
     }
 
-    static void abrirYEsperar(Runnable abrir) {
+    /**
+     * Abre la ventana y espera a que se cierre.
+     *
+     * @return true si la ventana se abrió y luego se cerró; false si no se pudo abrir
+     *         (sin entorno gráfico, error al crearla o módulo todavía sin pantalla).
+     */
+    static boolean abrirYEsperar(Runnable abrir) {
         if (GraphicsEnvironment.isHeadless()) {
             System.out.println("Esta opción necesita un entorno gráfico para abrir ventanas.");
-            return;
+            return false;
         }
 
         AWTEventListener oyente = evento -> {
@@ -61,16 +68,36 @@ final class VentanaUtil {
             }
             if (!hayVentanasVisibles()) {
                 System.out.println("Esta pantalla todavía no está disponible.");
-                return;
+                return false;
             }
 
             while (hayVentanasVisibles()) {
                 Thread.sleep(200);
             }
+            return true;
         } catch (InterruptedException ex) {
             Thread.currentThread().interrupt();
         } finally {
             Toolkit.getDefaultToolkit().removeAWTEventListener(oyente);
+        }
+        return false;
+    }
+
+    /**
+     * Ejecuta algo en el hilo de Swing (el que dibuja las ventanas) y espera a que termine.
+     * Se usa desde el hilo principal para crear, mostrar u ocultar ventanas sin romper Swing.
+     */
+    static void enHiloSwing(Runnable tarea) {
+        if (SwingUtilities.isEventDispatchThread()) {
+            tarea.run();
+            return;
+        }
+        try {
+            SwingUtilities.invokeAndWait(tarea);
+        } catch (InterruptedException ex) {
+            Thread.currentThread().interrupt();
+        } catch (InvocationTargetException ex) {
+            throw new RuntimeException(ex.getCause());
         }
     }
 

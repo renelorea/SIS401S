@@ -10,6 +10,7 @@ package edu.poo.sis401s.gestor.view;
  */
 import edu.poo.sis401s.gestor.controller.LoginController;
 import edu.poo.sis401s.gestor.model.Usuario;
+import java.awt.GraphicsEnvironment;
 
 public class LoginView {
     private static final int MAX_INTENTOS = 3;
@@ -20,7 +21,28 @@ public class LoginView {
         this.controller = controller;
     }
 
+    /**
+     * Pide las credenciales y devuelve el usuario que entró, o null si salió o agotó los intentos.
+     * Con pantalla se usa la ventana de login; sin pantalla, el login de texto (Scanner).
+     */
     public Usuario mostrarLogin() {
+        return GraphicsEnvironment.isHeadless() ? mostrarLoginTexto() : mostrarLoginVentana();
+    }
+
+    private Usuario mostrarLoginVentana() {
+        LoginVentana[] ventana = new LoginVentana[1];
+        VentanaUtil.enHiloSwing(() -> {
+            ventana[0] = new LoginVentana(controller, MAX_INTENTOS);
+            ventana[0].setVisible(true);
+        });
+
+        // La ventana avisa cuando la persona entra o sale; aquí (hilo principal) se espera ese resultado
+        Usuario usuario = ventana[0].esperarResultado();
+        VentanaUtil.enHiloSwing(ventana[0]::dispose);
+        return usuario;
+    }
+
+    private Usuario mostrarLoginTexto() {
         System.out.println("========================================");
         System.out.println("   GESTIÓN DE NEGOCIO - INICIAR SESIÓN");
         System.out.println("========================================");
