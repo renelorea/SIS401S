@@ -1,0 +1,59 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="1tCgtJFhdOIv9YaEQCRF">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-4" edge="1" parent="1" source="XHO5eHLyqHMuJ8tckP50-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=45;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-3" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;b&gt;PedidoView&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&amp;nbsp;&lt;i&gt; A[PedidoLogin &amp;lt;br&amp;gt; &amp;lt;i&amp;gt;El usuario ingresa datos o credenciales&amp;lt;/i&amp;gt;]&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;i&gt;end&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="280" x="30" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-6" edge="1" parent="1" source="XHO5eHLyqHMuJ8tckP50-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=100;exitDy=140;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="520" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-5" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;b&gt;PedidoController&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;B[PedidoController.java &amp;lt;br&amp;gt; &amp;lt;i&amp;gt;Recibe la solicitud HTTP y valida parámetros&amp;lt;/i&amp;gt;]&lt;br&gt;    end&amp;nbsp;&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="270" x="390" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-8" edge="1" parent="1" source="XHO5eHLyqHMuJ8tckP50-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=65;exitDy=290;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="330" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-7" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;b&gt;PedidoService.&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;C[PedidoServive.java &amp;lt;br&amp;gt; &amp;lt;i&amp;gt;Procesa reglas de negocio y validaciones&amp;lt;/i&amp;gt;]&lt;br/&gt;    end&amp;nbsp;&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="390" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-12" edge="1" parent="1" source="XHO5eHLyqHMuJ8tckP50-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=120;exitDy=145;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="175" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-9" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;b&gt;PedidoRepository&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;D[PedidoRepository.java &amp;lt;br&amp;gt; &amp;lt;i&amp;gt;Ejecuta consultas / persistencia&amp;lt;/i&amp;gt;]&lt;br/&gt;    end&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="280" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-13" edge="1" parent="1" source="XHO5eHLyqHMuJ8tckP50-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=95;exitDy=0;exitPerimeter=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="545" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-11" parent="1" style="verticalAlign=top;align=center;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;Pedido.Java&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;E[Instanciación del Objeto Pedido] --&amp;gt; F[Constructor Pedido &amp;lt;br&amp;gt; &amp;lt;i&amp;gt;Recibe: id, cliente, productos, fecha&amp;lt;/i&amp;gt;]&lt;br&gt;        F --&amp;gt; G[Asignar atributos usando this]&lt;br&gt;        G --&amp;gt; H{¿Qué operación se realiza?}&lt;br&gt;        H --&amp;gt;|Getters| I[Retorna valores: getId, getCliente, etc.]&lt;br&gt;        H --&amp;gt;|Setters| J[Actualiza valores con this.x = x]&lt;br&gt;        H --&amp;gt;|toString| K[Retorna estructura de texto del Pedido]&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="280" x="40" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-14" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="and" vertex="1">
+          <mxGeometry height="26" width="80" x="330" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-15" parent="1" style="verticalAlign=top;align=left;spacingTop=8;spacingLeft=2;spacingRight=12;shape=cube;size=10;direction=south;fontStyle=4;html=1;whiteSpace=wrap;" value="&lt;b&gt;Pedido.Java&lt;/b&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;&amp;nbsp;%% Flujo de Ida (Request)&lt;br/&gt;    A --&amp;gt;|1. Enviar datos| B&lt;br/&gt;    B --&amp;gt;|2. Invocar servicio| C&lt;br/&gt;    C --&amp;gt;|3. Solicitar operación| D&lt;br/&gt;    D --&amp;gt;|4. Construir / Instanciar entidad| E&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div style=&quot;text-align: center;&quot;&gt;&lt;i&gt;&amp;nbsp;%% Flujo de Ida (Request)&lt;br/&gt;    A --&amp;gt;|1. Enviar datos| B&lt;br/&gt;    B --&amp;gt;|2. Invocar servicio| C&lt;br/&gt;    C --&amp;gt;|3. Solicitar operación| D&lt;br/&gt;    D --&amp;gt;|4. Construir / Instanciar entidad| E&lt;/i&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="240" x="420" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="XHO5eHLyqHMuJ8tckP50-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Neli Jaquelin Gonzalez Ramirez&lt;div&gt;Luis Francisco Torres Pérez&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="350" x="40" y="710" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

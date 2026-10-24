@@ -1,0 +1,74 @@
+<mxfile host="Electron">
+  <diagram name="Página-1" id="xY1VxkOikkwDX45R70LQ">
+    <mxGraphModel dx="1030" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-3" edge="1" parent="1" source="JR5CrshqotXAL2Ux5LzV-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="165" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-1" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="➡️PedidoController.java" vertex="1">
+          <mxGeometry height="250" width="310" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-2" parent="JR5CrshqotXAL2Ux5LzV-1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Este es el controlador del módulo pedido, permite desarrollar correctamente las notificaciones al usuario al realizar un pedido y/o venta de acuerdo a lo que se encuentra presente en el pedido, además de que las notificaciones del sistema muestran si se trata de una cantidad nula o invalida, además de que también permite llevar el orden de como se organiza la lista y los productos seleccionados para el pedido y la organización de pedido de mercancía en la tabla que se va a hacer el pedido y cambios en cantidades." vertex="1">
+          <mxGeometry height="220" width="260" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-7" edge="1" parent="1" source="JR5CrshqotXAL2Ux5LzV-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-4" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="➡️Pedido.java" vertex="1">
+          <mxGeometry height="240" width="360" x="440" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Solamente se hizo la actualización de este archivo ya que le hacían falta los Setters y Getters y el archivo completo se encontraba dentro de una carpeta que no era referente al proyecto, ya se encuentra correctamente en la carpeta que debe ir" vertex="1">
+          <mxGeometry height="210" width="310" x="480" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-15" edge="1" parent="1" source="JR5CrshqotXAL2Ux5LzV-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-9" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="➡️PedidoRepository.java" vertex="1">
+          <mxGeometry height="220" width="350" x="440" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-10" parent="JR5CrshqotXAL2Ux5LzV-9" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;En este archivo se encuentra la &quot;LinkedHashMap/LinkedHashSet&quot; que permite mostrar la lista de los productos que se encuentran dentro de la tienda además de que también permite llevar el orden cronológico de los productos seleccionados dentro del pedido mediante la función &quot;Collection&quot; y también hacer la identificación de cada producto &quot;Id, nombre, cantidad&quot;.&lt;/div&gt;&lt;div&gt;&quot;Importante ❗: Este archivo muestra una lista provisional que tiene productos al azar hasta que se haga la vinculación adecuada de la lista real que haya realizado el módulo de Producto y hacer los cambios prudentes&quot;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="300" x="40" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-16" edge="1" parent="1" source="JR5CrshqotXAL2Ux5LzV-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="195" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-12" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;➡️PedidoOrderLine.java&lt;/div&gt;&lt;div&gt;➡️PedidoService.java&lt;/div&gt;&lt;div&gt;➡️PedidoYProducto.java&lt;/div&gt;" vertex="1">
+          <mxGeometry height="220" width="340" x="25" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-14" parent="JR5CrshqotXAL2Ux5LzV-12" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;Estos tres archivos están encargados de llevar a cabo la validación del programa al ejecutarse, es decir, permite que el usuario ponga números enteros positivos al hacer el pedido y marcar errores y notificaciones cuando haya alguna cantidad nula o invalida, además de que le pide al usuario específicar los nombres y Id que en verdad concuerden con los datos del sistema. También permite desarrollar el cálculo de la venta así como también ejecutar en las ventanas del programa el orden del pedido y mantener la herencia &quot;Collection&quot;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="190" width="280" x="40" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-21" edge="1" parent="1" source="JR5CrshqotXAL2Ux5LzV-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="770" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-17" parent="1" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;➡️PedidoView.java&lt;/div&gt;&lt;div&gt;➡️PedidoMain.java&lt;/div&gt;" vertex="1">
+          <mxGeometry height="200" width="340" x="25" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-18" parent="JR5CrshqotXAL2Ux5LzV-17" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Estos dos archivos permiten mostrar la vista del programa para el módulo de pedidos, se importan ventanas que incluyen botones de funciones rápidas para que el usuario pueda desarrollar el pedido que se va a hacer, además de que se importa una tabla para realizar pedido de mercancía o de &quot;Stock&quot; para la tienda." vertex="1">
+          <mxGeometry height="180" width="280" x="35" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-19" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;➡️➡️ Comandos y funciones Utilizadas en los archivos&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="50" width="310" x="465" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;roundedPerimeter=1;" value="&lt;div&gt;import java.util.ArrayList&lt;/div&gt;&lt;div&gt;import java.util.map&lt;/div&gt;&lt;div&gt;import java.math.BigDecimal&lt;/div&gt;&lt;div&gt;import java.util.collection&lt;/div&gt;&lt;div&gt;Jframe&lt;/div&gt;&lt;div&gt;Jbutton&lt;/div&gt;&lt;div&gt;JLabel&lt;/div&gt;&lt;div&gt;JPanel&lt;/div&gt;&lt;div&gt;JTable&lt;/div&gt;&lt;div&gt;JScrollPanel&lt;/div&gt;&lt;div&gt;JOptionPane&lt;/div&gt;&lt;div&gt;LinkedHashMap&lt;/div&gt;&lt;div&gt;Runnable&lt;/div&gt;&lt;div&gt;view.showError&lt;/div&gt;&lt;div&gt;Try&lt;/div&gt;&lt;div&gt;For&lt;/div&gt;&lt;div&gt;If&lt;/div&gt;&lt;div&gt;Continue&amp;nbsp;&lt;/div&gt;&lt;div&gt;Exception&amp;nbsp;&lt;/div&gt;&lt;div&gt;String&lt;/div&gt;&lt;div&gt;Int&lt;/div&gt;&lt;div&gt;Boolean&amp;nbsp;&lt;/div&gt;&lt;div&gt;Void&lt;/div&gt;&lt;div&gt;Null&lt;/div&gt;&lt;div&gt;Refresh&amp;nbsp;&lt;/div&gt;&lt;div&gt;True&amp;nbsp;&lt;/div&gt;&lt;div&gt;False&amp;nbsp;&lt;/div&gt;&lt;div&gt;OrderLine&lt;/div&gt;&lt;div&gt;Catch&lt;/div&gt;&lt;div&gt;IllegalArgumentException&lt;/div&gt;&lt;div&gt;toString&lt;/div&gt;&lt;div&gt;Switch&lt;/div&gt;" vertex="1">
+          <mxGeometry height="485" width="310" x="460" y="655" as="geometry" />
+        </mxCell>
+        <mxCell id="JR5CrshqotXAL2Ux5LzV-22" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Luis Francisco Torres Pérez&lt;div&gt;Neli Jaquelin Gonzalez Ramirez&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="325" x="40" y="920" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
