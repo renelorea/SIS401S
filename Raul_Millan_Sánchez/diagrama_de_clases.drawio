@@ -1,0 +1,681 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.7.0" type="device">
+  <diagram id="clases-usuario-encuestas" name="Diagrama de clases">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1455" pageHeight="2254" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" value="Diagrama de clases — Módulos Usuario y Encuestas (Gestión de Negocio)" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="26" width="1100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="banda0" value="PRINCIPAL · UTILIDADES · EXTERNAS" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="82" width="1375" height="198" as="geometry" />
+        </mxCell>
+        <mxCell id="banda1" value="VISTA" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="306" width="1375" height="400" as="geometry" />
+        </mxCell>
+        <mxCell id="banda2" value="CONTROLADOR" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="742" width="1375" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="banda3" value="SERVICIO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="988" width="1375" height="256" as="geometry" />
+        </mxCell>
+        <mxCell id="banda4" value="REPOSITORIO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1270" width="1375" height="220" as="geometry" />
+        </mxCell>
+        <mxCell id="banda5" value="MODELO" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f7f7f7;strokeColor=#dddddd;align=left;verticalAlign=top;spacingLeft=10;spacingTop=5;fontStyle=1;fontSize=11;fontColor=#8a8a8a;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1516" width="1375" height="328" as="geometry" />
+        </mxCell>
+        <mxCell id="n_GestionNegocio" value="GestionNegocio" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#e8e8e8;strokeColor=#666666;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40" y="194" width="190" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="n_GestionNegocio_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_GestionNegocio">
+          <mxGeometry x="0" y="36" width="190" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_GestionNegocio_m0" value="+ main(args) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_GestionNegocio">
+          <mxGeometry x="0" y="44" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil" value="&lt;span style=&quot;font-weight:normal;font-size:11px&quot;&gt;«final»&lt;/span&gt;&lt;br&gt;ConsolaUtil" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=42;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="365.0" y="116" width="210" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_a0" value="- SCANNER : Scanner" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="42" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="60" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_m0" value="~ leerTexto(mensaje) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="68" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_m1" value="~ leerClave(mensaje) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="86" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_m2" value="~ leerEntero(mensaje, min, max) : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="104" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ConsolaUtil_m3" value="- leerLinea(mensaje) : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_ConsolaUtil">
+          <mxGeometry x="0" y="122" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil" value="&lt;span style=&quot;font-weight:normal;font-size:11px&quot;&gt;«final»&lt;/span&gt;&lt;br&gt;VentanaUtil" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=42;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#f5f5f5;strokeColor=#666666;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="620" y="126" width="270" height="134" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_VentanaUtil">
+          <mxGeometry x="0" y="50" width="270" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil_m0" value="~ abrirYEsperar(abrir) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_VentanaUtil">
+          <mxGeometry x="0" y="58" width="270" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil_m1" value="~ botonSoloCierraVentana(ventana, texto) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_VentanaUtil">
+          <mxGeometry x="0" y="76" width="270" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil_m2" value="- buscarBoton(contenedor, texto) : AbstractButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_VentanaUtil">
+          <mxGeometry x="0" y="94" width="270" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_VentanaUtil_m3" value="- hayVentanasVisibles() : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_VentanaUtil">
+          <mxGeometry x="0" y="112" width="270" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_JFrame" value="&lt;span style=&quot;font-weight:normal;font-size:11px&quot;&gt;«javax.swing»&lt;/span&gt;&lt;br&gt;JFrame" style="rounded=0;whiteSpace=wrap;html=1;fontStyle=1;fontSize=13;fillColor=#ffffff;strokeColor=#808080;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1135.0" y="210" width="190" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView" value="LoginView" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="65.0" y="340" width="190" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView_a0" value="- MAX_INTENTOS : int = 3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;fontStyle=4;" vertex="1" parent="n_LoginView">
+          <mxGeometry x="0" y="28" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView_a1" value="- controller : LoginController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginView">
+          <mxGeometry x="0" y="46" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_LoginView">
+          <mxGeometry x="0" y="64" width="190" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView_m0" value="+ LoginView(controller)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginView">
+          <mxGeometry x="0" y="72" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginView_m1" value="+ mostrarLogin() : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginView">
+          <mxGeometry x="0" y="90" width="190" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu" value="MainMenu" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="350.0" y="340" width="240" height="328" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a0" value="- usuario : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="28" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a1" value="- encuestaController : EncuestaController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="46" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a2" value="- reservaService : ReservaService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="64" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a3" value="- reservaController : ReservaController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="82" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a4" value="- pedidoController : PedidoController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="100" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_a5" value="- empleadoController : EmpleadoController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="118" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="136" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m0" value="+ MainMenu(usuario)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="144" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m1" value="+ mostrarMenu() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="162" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m2" value="- menuAdmin() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="180" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m3" value="- menuEmpleado() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="198" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m4" value="- menuCliente() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="216" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m5" value="- abrirEncuestas() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="234" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m6" value="- abrirReservas() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="252" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m7" value="- abrirEmpleados() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="270" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m8" value="- pedidos() : PedidoController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="288" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_MainMenu_m9" value="- despedirse() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_MainMenu">
+          <mxGeometry x="0" y="306" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView" value="EncuestaConsolaView" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="680" y="340" width="240" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_a0" value="- controller : EncuestaController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="28" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_a1" value="- usuario : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="46" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="64" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m0" value="+ EncuestaConsolaView(controller, usuario)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="72" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m1" value="+ mostrar() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="90" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m2" value="- registrar() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="108" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m3" value="- listar() : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="126" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m4" value="- mostrarPromedio() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="144" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaConsolaView_m5" value="- eliminar() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaConsolaView">
+          <mxGeometry x="0" y="162" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView" value="EncuestaView" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#dae8fc;strokeColor=#6c8ebf;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1115.0" y="340" width="230" height="346" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a0" value="- controller : EncuestaController" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="28" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a1" value="- usuario : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="46" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a2" value="- cmbCliente : JComboBox&lt;Cliente&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="64" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a3" value="- cmbCalificacion : JComboBox&lt;Integer&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="82" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a4" value="- txtComentario : JTextArea" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="100" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a5" value="- tabla : JTable" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="118" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a6" value="- modelo : DefaultTableModel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="136" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a7" value="- lblPromedio : JLabel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="154" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_a8" value="- btnEliminar : JButton" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="172" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="190" width="230" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m0" value="+ EncuestaView(controller, usuario)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="198" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m1" value="- construirInterfaz() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="216" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m2" value="- crearFormulario() : JPanel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="234" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m3" value="- crearTabla() : JScrollPane" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="252" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m4" value="- crearBarraInferior() : JPanel" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="270" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m5" value="- cargarTabla() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="288" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m6" value="- guardarEncuesta() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="306" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaView_m7" value="- eliminarSeleccionada() : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaView">
+          <mxGeometry x="0" y="324" width="230" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginController" value="LoginController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="50.0" y="776" width="220" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginController_a0" value="- service : LoginService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginController">
+          <mxGeometry x="0" y="28" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginController_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_LoginController">
+          <mxGeometry x="0" y="46" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginController_m0" value="+ LoginController(service)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginController">
+          <mxGeometry x="0" y="54" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginController_m1" value="+ login(username, password) : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginController">
+          <mxGeometry x="0" y="72" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController" value="EncuestaController" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#d5e8d4;strokeColor=#82b366;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="695.0" y="776" width="350" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_a0" value="- encuestaService : EncuestaService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="28" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="46" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m0" value="+ EncuestaController()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="54" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m1" value="+ registrarEncuesta(idCliente, calificacion, comentario) : Encuesta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="72" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m2" value="+ listarEncuestas() : List&lt;Encuesta&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="90" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m3" value="+ listarClientes() : List&lt;Cliente&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="108" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m4" value="+ eliminarEncuesta(id) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="126" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaController_m5" value="+ calcularPromedio() : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaController">
+          <mxGeometry x="0" y="144" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginService" value="LoginService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40.0" y="1022" width="240" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginService_a0" value="- repo : UsuarioRepository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginService">
+          <mxGeometry x="0" y="28" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginService_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_LoginService">
+          <mxGeometry x="0" y="46" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginService_m0" value="+ LoginService(repo)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginService">
+          <mxGeometry x="0" y="54" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_LoginService_m1" value="+ autenticar(username, password) : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_LoginService">
+          <mxGeometry x="0" y="72" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService" value="EncuestaService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#fff2cc;strokeColor=#d6b656;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="695.0" y="1022" width="350" height="202" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_a0" value="- encuestaRepository : EncuestaRepository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="28" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_a1" value="- clienteService : ClienteService" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="46" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="64" width="350" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m0" value="+ EncuestaService()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="72" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m1" value="+ EncuestaService(clienteService)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="90" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m2" value="+ registrarEncuesta(idCliente, calificacion, comentario) : Encuesta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="108" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m3" value="+ listarEncuestas() : List&lt;Encuesta&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="126" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m4" value="+ listarClientes() : List&lt;Cliente&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="144" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m5" value="+ eliminarEncuesta(id) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="162" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaService_m6" value="+ calcularPromedio() : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaService">
+          <mxGeometry x="0" y="180" width="350" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService" value="&lt;span style=&quot;font-weight:normal;font-size:11px&quot;&gt;«otro equipo»&lt;/span&gt;&lt;br&gt;ClienteService" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=42;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffffff;strokeColor=#808080;swimlaneFillColor=#ffffff;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1105" y="1022" width="250" height="162" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_a0" value="- clienteRepository : ClienteRepository" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="42" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="60" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_m0" value="+ registrarNuevoCliente(c) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="68" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_m1" value="+ listarTodosLosClientes() : List&lt;Cliente&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="86" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_m2" value="+ buscarCliente(id) : Cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="104" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_m3" value="+ buscarClientePorNombre(nombre) : Cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="122" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_ClienteService_m4" value="+ eliminarCliente(id) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_ClienteService">
+          <mxGeometry x="0" y="140" width="250" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_UsuarioRepository" value="UsuarioRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="40.0" y="1304" width="240" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="n_UsuarioRepository_a0" value="- usuarios : HashMap&lt;String, Usuario&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_UsuarioRepository">
+          <mxGeometry x="0" y="28" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_UsuarioRepository_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_UsuarioRepository">
+          <mxGeometry x="0" y="46" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_UsuarioRepository_m0" value="+ UsuarioRepository()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_UsuarioRepository">
+          <mxGeometry x="0" y="54" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_UsuarioRepository_m1" value="+ buscarPorUsername(username) : Usuario" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_UsuarioRepository">
+          <mxGeometry x="0" y="72" width="240" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository" value="EncuestaRepository" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffe6cc;strokeColor=#d79b00;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="770.0" y="1304" width="200" height="166" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_a0" value="- encuestas : List&lt;Encuesta&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="28" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_a1" value="- siguienteId : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="46" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="64" width="200" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_m0" value="+ generarId() : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="72" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_m1" value="+ guardar(encuesta) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="90" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_m2" value="+ obtenerTodas() : List&lt;Encuesta&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="108" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_m3" value="+ buscarPorId(id) : Encuesta" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="126" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_EncuestaRepository_m4" value="+ eliminar(id) : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_EncuestaRepository">
+          <mxGeometry x="0" y="144" width="200" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario" value="Usuario" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="360.0" y="1550" width="220" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_a0" value="- id : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="28" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_a1" value="- username : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="46" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_a2" value="- password : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="64" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_a3" value="- rol : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="82" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="100" width="220" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m0" value="+ Usuario(id, username, password, rol)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="108" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m1" value="+ getId() : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="126" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m2" value="+ setId(id) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="144" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m3" value="+ getUsername() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="162" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m4" value="+ setUsername(username) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="180" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m5" value="+ getPassword() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="198" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m6" value="+ setPassword(password) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="216" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m7" value="+ getRol() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="234" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Usuario_m8" value="+ setRol(rol) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Usuario">
+          <mxGeometry x="0" y="252" width="220" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta" value="Encuesta" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=28;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#e1d5e7;strokeColor=#9673a6;swimlaneFillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="740.0" y="1550" width="260" height="274" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_a0" value="- id : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="28" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_a1" value="- cliente : Cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="46" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_a2" value="- calificacion : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="64" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_a3" value="- comentario : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="82" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="100" width="260" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m0" value="+ Encuesta(id, cliente, calificacion, comentario)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="108" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m1" value="+ getId() : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="126" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m2" value="+ setId(id) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="144" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m3" value="+ getCliente() : Cliente" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="162" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m4" value="+ setCliente(cliente) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="180" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m5" value="+ getCalificacion() : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="198" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m6" value="+ setCalificacion(calificacion) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="216" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m7" value="+ getComentario() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="234" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Encuesta_m8" value="+ setComentario(comentario) : void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Encuesta">
+          <mxGeometry x="0" y="252" width="260" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente" value="&lt;span style=&quot;font-weight:normal;font-size:11px&quot;&gt;«otro equipo»&lt;/span&gt;&lt;br&gt;Cliente" style="swimlane;fontStyle=1;align=center;verticalAlign=middle;childLayout=stackLayout;horizontal=1;startSize=42;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;whiteSpace=wrap;html=1;fontSize=13;fillColor=#ffffff;strokeColor=#808080;swimlaneFillColor=#ffffff;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="1060.0" y="1550" width="210" height="216" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a0" value="- id : int" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="42" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a1" value="- nombre : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="60" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a2" value="- correo : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="78" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a3" value="- telefono : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="96" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a4" value="- tipoPerfil : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="114" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_a5" value="- fechaRegistro : LocalDate" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="132" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="150" width="210" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_m0" value="+ Cliente(id, nombre, correo, telefono)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="158" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_m1" value="+ getters y setters" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="176" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="n_Cliente_m2" value="+ toString() : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=6;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontSize=11;" vertex="1" parent="n_Cliente">
+          <mxGeometry x="0" y="194" width="210" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" value="«crea»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=0.3684;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.2368;entryY=0.0000;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_GestionNegocio" target="n_LoginView">
+          <mxGeometry relative="1" x="0.0" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="«crea»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=1.0000;exitY=0.5000;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.1220;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_GestionNegocio" target="n_MainMenu">
+          <mxGeometry relative="1" x="-0.1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="227" />
+              <mxPoint x="300" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_LoginView" target="n_LoginController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_LoginController" target="n_LoginService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_LoginService" target="n_UsuarioRepository">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.6667;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1818;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_UsuarioRepository" target="n_Usuario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5_m" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="e5">
+          <mxGeometry x="0.745" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_MainMenu" target="n_Usuario">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.8750;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.1143;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_MainMenu" target="n_EncuestaController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.3000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaConsolaView" target="n_EncuestaController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.1522;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.8714;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaView" target="n_EncuestaController">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaController" target="n_EncuestaService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaService" target="n_EncuestaRepository">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e12" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=1.0000;exitY=0.3366;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.4198;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaService" target="n_ClienteService">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;exitX=0.5000;exitY=1.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=0.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaRepository" target="n_Encuesta">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e13_m" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="e13">
+          <mxGeometry x="0.2" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e14" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;startArrow=diamondThin;startSize=14;startFill=0;endArrow=open;endSize=10;exitX=1.0000;exitY=0.3650;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.4630;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_Encuesta" target="n_Cliente">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e14_m" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=10;" vertex="1" connectable="0" parent="e14">
+          <mxGeometry x="-0.067" y="-12" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e15" value="«crea»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=1.0000;exitY=0.1829;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.3261;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_MainMenu" target="n_EncuestaConsolaView">
+          <mxGeometry relative="1" x="0.0" as="geometry" />
+        </mxCell>
+        <mxCell id="e16" value="«crea»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=1.0000;exitY=0.7927;exitDx=0;exitDy=0;entryX=0.0000;entryY=0.7514;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_MainMenu" target="n_EncuestaView">
+          <mxGeometry relative="1" x="0.56" as="geometry" />
+        </mxCell>
+        <mxCell id="e17" value="«usa»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_MainMenu" target="n_ConsolaUtil">
+          <mxGeometry relative="1" x="0.0" as="geometry" />
+        </mxCell>
+        <mxCell id="e18" value="«usa»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=0.8750;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.1481;entryY=1.0000;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_MainMenu" target="n_VentanaUtil">
+          <mxGeometry relative="1" x="0.1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="300" />
+              <mxPoint x="660" y="300" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e19" value="«usa»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=0.6579;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.2143;entryY=1.0000;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_LoginView" target="n_ConsolaUtil">
+          <mxGeometry relative="1" x="0.24" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="320" />
+              <mxPoint x="410" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e20" value="«usa»" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;exitX=0.2500;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.8333;entryY=1.0000;entryDx=0;entryDy=0;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="n_EncuestaConsolaView" target="n_ConsolaUtil">
+          <mxGeometry relative="1" x="0.0" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="320" />
+              <mxPoint x="540" y="320" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e21" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=block;endSize=14;endFill=0;exitX=0.5000;exitY=0.0000;exitDx=0;exitDy=0;entryX=0.5000;entryY=1.0000;entryDx=0;entryDy=0;" edge="1" parent="1" source="n_EncuestaView" target="n_JFrame">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#999999;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1884" width="1375" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="leyenda_t" value="Cómo leer el diagrama" style="text;html=1;align=left;verticalAlign=middle;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="34" y="1890" width="300" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_e0" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=open;endSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="44" y="1936" as="sourcePoint" />
+            <mxPoint x="124" y="1936" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_t0" value="Asociación: la clase tiene un atributo de la otra clase." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="144" y="1926" width="1225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_e1" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;dashed=1;endArrow=open;endSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="44" y="1962" as="sourcePoint" />
+            <mxPoint x="124" y="1962" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_t1" value="Dependencia: la clase usa o crea a la otra («usa», «crea»)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="144" y="1952" width="1225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_e2" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=block;endSize=14;endFill=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="44" y="1988" as="sourcePoint" />
+            <mxPoint x="124" y="1988" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_t2" value="Herencia (extends)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="144" y="1978" width="1225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_e3" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;startArrow=diamondThin;startSize=14;startFill=0;endArrow=open;endSize=10;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="44" y="2014" as="sourcePoint" />
+            <mxPoint x="124" y="2014" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg_t3" value="Agregación: la clase contiene a otra que existe por sí sola (una Encuesta tiene un Cliente)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="144" y="2004" width="1225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_dash" value="" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;fillColor=#ffffff;strokeColor=#808080;" vertex="1" parent="1">
+          <mxGeometry x="44" y="2031" width="80" height="18" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_x0" value="Borde punteado: clase de otro equipo o de Java (no pertenece a nuestro módulo)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="144" y="2030" width="1225" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_x1" value="Visibilidad: + público, - privado, ~ paquete. Subrayado = miembro static. Se omiten los tipos de los parámetros." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="44" y="2056" width="1325" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_x2" value="Los atributos usuario : Usuario de EncuestaConsolaView y EncuestaView también son asociaciones con Usuario; no se dibujan para que el diagrama sea legible." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="44" y="2082" width="1325" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_x3" value="MainMenu también abre pantallas de otros equipos según el rol: ProductoMenuView, ProductoView, ClienteView, ReporteFinancieroView, VentaView1, ReservaView, EmpleadoView y PedidoController." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="44" y="2108" width="1325" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_x4" value="&lt;b&gt;Flujo de login (profesor): GestionNegocio.main → LoginView → LoginController → LoginService → UsuarioRepository → Usuario&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="44" y="2134" width="1325" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

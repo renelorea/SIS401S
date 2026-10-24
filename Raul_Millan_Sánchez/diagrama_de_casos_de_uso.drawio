@@ -1,0 +1,136 @@
+<mxfile host="app.diagrams.net" agent="Claude" version="24.7.0" type="device">
+  <diagram id="casos-uso-usuario-encuestas" name="Diagrama de casos de uso">
+    <mxGraphModel dx="1422" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1360" pageHeight="1118" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="titulo" value="Diagrama de casos de uso — Módulos Usuario y Encuestas (Gestión de Negocio)" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="26" width="1100" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="frontera" value="Sistema de Gestión de Negocio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#666666;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200" width="820" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="r0" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_usuario" target="cu_uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_usuario" target="cu_uc2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_usuario" target="cu_uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_usuario" target="cu_uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_cliente" target="cu_uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_cliente" target="cu_uc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r6" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_cliente" target="cu_uc7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r7" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_admin" target="cu_uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r8" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_admin" target="cu_uc6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r9" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_admin" target="cu_uc7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r10" value="" style="html=1;rounded=0;edgeStyle=none;strokeWidth=1;endArrow=none;" edge="1" parent="1" source="a_admin" target="cu_uc8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r11" value="«include»" style="html=1;rounded=0;edgeStyle=none;dashed=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="cu_uc2" target="cu_uc1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r12" value="«include»" style="html=1;rounded=0;edgeStyle=none;dashed=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="cu_uc1" target="cu_val_cred">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r13" value="«include»" style="html=1;rounded=0;edgeStyle=none;dashed=1;endArrow=open;endSize=10;labelBackgroundColor=#ffffff;fontSize=10;" edge="1" parent="1" source="cu_uc5" target="cu_val_enc">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r14" value="" style="html=1;rounded=0;edgeStyle=none;endArrow=block;endSize=14;endFill=0;" edge="1" parent="1" source="a_cliente" target="a_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r15" value="" style="html=1;rounded=0;edgeStyle=none;endArrow=block;endSize=14;endFill=0;" edge="1" parent="1" source="a_admin" target="a_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1160" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="r16" value="" style="html=1;rounded=0;edgeStyle=none;endArrow=block;endSize=14;endFill=0;" edge="1" parent="1" source="a_empleado" target="a_usuario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1230" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cu_uc1" value="Iniciar sesión" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="318.0" y="268.0" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc2" value="Ver menú según el rol" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="543.0" y="268.0" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc3" value="Abrir módulos del negocio según el rol" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="723.0" y="268.0" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc4" value="Cerrar sesión (Salir)" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="903.0" y="268.0" width="140" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_val_cred" value="Validar credenciales (máximo 3 intentos)" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="303.0" y="378.0" width="170" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_val_enc" value="Validar cliente, calificación y comentario" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="565.0" y="450.0" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc5" value="Registrar encuesta" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="550.0" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc6" value="Ver encuestas" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="640.0" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc7" value="Ver promedio de calificaciones" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="730.0" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cu_uc8" value="Eliminar encuesta" style="ellipse;whiteSpace=wrap;html=1;fontSize=11;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="575.0" y="820.0" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_usuario" value="Usuario (autenticado)" style="shape=umlActor;verticalLabelPosition=top;verticalAlign=bottom;html=1;outlineConnect=0;fontSize=12;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="665.0" y="95.0" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_cliente" value="Cliente" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="75.0" y="670.0" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_empleado" value="Empleado" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1215.0" y="370.0" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="a_admin" value="Administrador" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontSize=12;fontStyle=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1145.0" y="700.0" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="notas_t" value="Notas" style="text;html=1;align=left;verticalAlign=middle;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="930" width="200" height="24" as="geometry" />
+        </mxCell>
+        <mxCell id="nota0" value="&lt;b&gt;Los roles salen de Usuario.rol: «admin», «empleado» y «cliente». Cada rol hereda los casos de uso de Usuario (flecha de generalización).&lt;/b&gt;" style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="956" width="1280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nota1" value="Encuestas: el administrador y el cliente pueden registrar, ver y consultar el promedio; solo el administrador puede eliminar. El empleado no tiene acceso a encuestas." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="982" width="1280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nota2" value="Abrir módulos del negocio: el menú abre las pantallas de los otros equipos según el rol (inventario, empleados, reportes, clientes, ventas, pedidos y reservas)." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1008" width="1280" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nota3" value="Cada encuesta se puede responder en el menú de texto (Scanner) o en la ventana (JFrame); los casos de uso son los mismos." style="text;html=1;align=left;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1034" width="1280" height="20" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
